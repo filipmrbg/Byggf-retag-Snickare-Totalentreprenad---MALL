@@ -3,7 +3,7 @@ import { Facebook, Instagram, Mail, Phone, MapPin } from 'lucide-react';
 import images from '../data/images';
 
 const serviceLinks = [
-  { label: 'Småhusbyggnation', href: '/tjanster#smahusbyggnation' },
+  { label: 'Nybyggnation', href: '/tjanster#nybyggnation' },
   { label: 'Renovering', href: '/tjanster#renovering' },
   { label: 'Ombyggnation', href: '/tjanster#ombyggnation' },
   { label: 'Totalentreprenad', href: '/tjanster#totalentreprenad' },

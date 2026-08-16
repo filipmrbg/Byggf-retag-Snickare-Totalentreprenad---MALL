@@ -133,7 +133,7 @@ Only replace the background media source while keeping the existing structure of
 Ensure the image/video is responsive and scales properly across desktop, tablet, and mobile devices.
 
 Hero Background Image/Video URL:
-https://d8j0ntlcm91z4.cloudfront.net/user_3G5LlmMYORSdAk8SxzXrK2S0Is5/hf_20260812_231416_315184a1-35fa-411b-b0de-8487aec45acc.mp4
+https://d8j0ntlcm91z4.cloudfront.net/user_3G5LlmMYORSdAk8SxzXrK2S0Is5/hf_20260816_182956_5f9788b4-1956-469f-bd36-25622b10a0ef.mp4
 ```
 
 ---

@@ -51,7 +51,7 @@ const homeFaqItems = [
 export default function Home() {
   usePageTitle(
     'JH Huskvalitet AB | Bygg och Huskvalitet i Uppland',
-    'JH Huskvalitet AB utför småhusbyggnation, renovering, ombyggnation och totalentreprenad i Uppland med omnejd. Kontakta oss för en kostnadsfri offert!'
+    'JH Huskvalitet AB utför nybyggnation, renovering, ombyggnation och totalentreprenad i Uppland med omnejd. Kontakta oss för en kostnadsfri offert!'
   );
 
   const heroBgRef = useRef<HTMLDivElement>(null);
@@ -145,7 +145,7 @@ export default function Home() {
         >
           <video
             ref={heroVideoRef}
-            src="https://d8j0ntlcm91z4.cloudfront.net/user_3G5LlmMYORSdAk8SxzXrK2S0Is5/hf_20260812_231416_315184a1-35fa-411b-b0de-8487aec45acc.mp4"
+            src="https://d8j0ntlcm91z4.cloudfront.net/user_3G5LlmMYORSdAk8SxzXrK2S0Is5/hf_20260816_182956_5f9788b4-1956-469f-bd36-25622b10a0ef.mp4"
             preload="auto"
             autoPlay
             loop
@@ -158,7 +158,7 @@ export default function Home() {
               objectPosition: 'center',
             }}
           >
-            <source src="https://d8j0ntlcm91z4.cloudfront.net/user_3G5LlmMYORSdAk8SxzXrK2S0Is5/hf_20260812_231416_315184a1-35fa-411b-b0de-8487aec45acc.mp4" type="video/mp4" />
+            <source src="https://d8j0ntlcm91z4.cloudfront.net/user_3G5LlmMYORSdAk8SxzXrK2S0Is5/hf_20260816_182956_5f9788b4-1956-469f-bd36-25622b10a0ef.mp4" type="video/mp4" />
           </video>
         </div>
         {/* Dark overlay */}
@@ -225,7 +225,7 @@ export default function Home() {
                 textShadow: '0 2px 12px rgba(0, 0, 0, 0.85)',
                 fontWeight: 400,
               }}>
-                Ett personligt byggföretag i Uppland med fokus på småhusbyggnation, renovering, ombyggnation och totalentreprenad med kvalitet i varje led.
+                Ett personligt byggföretag i Uppland med fokus på nybyggnation, renovering, ombyggnation och totalentreprenad med kvalitet i varje led.
               </p>
             </ScrollReveal>
 
@@ -322,7 +322,7 @@ export default function Home() {
                   lineHeight: 1.65,
                   margin: '0 0 12px 0',
                 }}>
-                  Från nybyggnation av småhus och totalentreprenader till renoveringar och ombyggnationer i Uppland med omnejd.
+                  Från nybyggnation och totalentreprenader till renoveringar och ombyggnationer i Uppland med omnejd.
                 </p>
                 <Link
                   to="/tjanster"

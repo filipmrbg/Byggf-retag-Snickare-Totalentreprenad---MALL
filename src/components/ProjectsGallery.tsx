@@ -14,7 +14,7 @@ const references: ReferenceItem[] = [
   {
     id: '1',
     image: '/service-smahusbyggnation.webp',
-    alt: 'Småhusbyggnation i Uppland',
+    alt: 'Nybyggnation i Uppland',
   },
   {
     id: '2',

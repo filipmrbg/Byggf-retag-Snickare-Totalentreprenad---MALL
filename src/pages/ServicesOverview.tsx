@@ -15,7 +15,7 @@ const container: React.CSSProperties = {
 export default function ServicesOverview() {
   usePageTitle(
     'Våra Tjänster | JH Huskvalitet AB Uppland',
-    'Utforska våra byggtjänster: Småhusbyggnation, Renovering, Ombyggnation och Totalentreprenad i Uppland med omnejd.'
+    'Utforska våra byggtjänster: Nybyggnation, Renovering, Ombyggnation och Totalentreprenad i Uppland med omnejd.'
   );
 
   const { hash } = useLocation();

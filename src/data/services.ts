@@ -34,16 +34,16 @@ export interface ServiceItem {
 
 export const services: ServiceItem[] = [
   {
-    slug: 'smahusbyggnation',
-    title: 'Småhusbyggnation',
-    shortDescription: 'Vi bygger kundanpassade småhus, villor och fritidshus från grund till nyckelfärdigt hem med högsta precision och yrkesstolthet.',
-    heroText: 'Förverkliga ditt drömboende. Professionell småhusbyggnation i Uppland med omnejd med trygghet och kvalitet i varje moment.',
-    detailedDescription: `Att bygga ett nytt småhus är ett av livets största och mest spännande projekt. Hos JH Huskvalitet AB hjälper vi dig att förverkliga ditt drömboende, oavsett om det gäller en modern villa, ett klassiskt trähus eller ett funktionellt fritidshus.
+    slug: 'nybyggnation',
+    title: 'Nybyggnation',
+    shortDescription: 'Vi bygger kundanpassade hus, villor och fritidshus från grund till nyckelfärdigt hem med högsta precision och yrkesstolthet.',
+    heroText: 'Förverkliga ditt drömboende. Professionell nybyggnation i Uppland med omnejd med trygghet och kvalitet i varje moment.',
+    detailedDescription: `Att bygga nytt är ett av livets största och mest spännande projekt. Hos JH Huskvalitet AB hjälper vi dig att förverkliga ditt drömboende, oavsett om det gäller en modern villa, ett klassiskt trähus eller ett funktionellt fritidshus.
 
 Vi hanterar hela byggprocessen med noggrannhet och struktur. Från markförberedelser och grundläggning till stomresning, isolering, fasad och inredningssnickeri. Med vår breda kompetens och kvalitetsmedvetenhet kan du känna dig helt trygg genom hela bygget.`,
     heroImage: '/service-smahusbyggnation.webp',
     image: '/service-smahusbyggnation.webp',
-    href: '/tjanster#smahusbyggnation',
+    href: '/tjanster#nybyggnation',
     tag: 'Nybyggnation',
     badge: 'Kundanpassat',
     highlights: [
@@ -70,7 +70,7 @@ Vi hanterar hela byggprocessen med noggrannhet och struktur. Från markförbered
     ],
     faq: [
       {
-        question: 'Hur lång tid tar det att bygga ett småhus?',
+        question: 'Hur lång tid tar en nybyggnation?',
         answer: 'Tidsplanen varierar beroende på husets storlek och konstruktion, men vanligtvis tar byggnationen mellan 6 och 12 månader från godkänt bygglov till färdigställande.',
       },
       {

@@ -30,6 +30,7 @@ export interface SiteImages {
     background: ImageSlot;
   };
   services: {
+    nybyggnation?: ImageSlot;
     smahusbyggnation?: ImageSlot;
     renovering?: ImageSlot;
     ombyggnation?: ImageSlot;
@@ -89,9 +90,13 @@ const images: SiteImages = {
   },
 
   services: {
+    nybyggnation: {
+      url: '/service-smahusbyggnation.webp',
+      alt: 'Nybyggnation och trähus i Uppland',
+    },
     smahusbyggnation: {
       url: '/service-smahusbyggnation.webp',
-      alt: 'Småhusbyggnation och nybyggnation av trähus i Uppland',
+      alt: 'Nybyggnation och trähus i Uppland',
     },
     renovering: {
       url: '/service-renovering.webp',
