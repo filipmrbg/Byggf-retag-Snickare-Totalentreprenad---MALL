@@ -50,8 +50,8 @@ const homeFaqItems = [
 
 export default function Home() {
   usePageTitle(
-    'JH Huskvalitet AB | Bygg och Huskvalitet i Uppland',
-    'JH Huskvalitet AB utför nybyggnation, renovering, ombyggnation och totalentreprenad i Uppland med omnejd. Kontakta oss för en kostnadsfri offert!'
+    'WSH Bygg | Din byggfirma i Alfta, Edsbyn, Bollnäs & Hälsingland',
+    'WSH Bygg i Alfta utför nybyggnation, renovering, tillbyggnad, gjutning, grundarbete och takbyten i Ovanåkers kommun, Edsbyn, Bollnäs och hela Hälsingland. Kontakta oss för fri offert!'
   );
 
   const heroBgRef = useRef<HTMLDivElement>(null);
@@ -192,7 +192,7 @@ export default function Home() {
                 display: 'block',
                 marginBottom: '14px',
               }}>
-                UPPLAND MED OMNEJD
+                ALFTA • EDSBYN • BOLLNÄS • HÄLSINGLAND
               </span>
             </ScrollReveal>
 
@@ -201,7 +201,7 @@ export default function Home() {
               <h1 style={{
                 fontFamily: "'Outfit', sans-serif",
                 color: '#ffffff',
-                fontSize: 'clamp(3.2rem, 7.5vw, 5.8rem)',
+                fontSize: 'clamp(3.5rem, 8vw, 6.2rem)',
                 fontWeight: 900,
                 lineHeight: 0.98,
                 textTransform: 'uppercase',
@@ -209,7 +209,7 @@ export default function Home() {
                 margin: '0 0 24px 0',
                 textShadow: '0 4px 18px rgba(0, 0, 0, 0.75)',
               }}>
-                JH<br />HUSKVALITET<br />AB
+                WSH<br />BYGG
               </h1>
             </ScrollReveal>
 
@@ -220,12 +220,12 @@ export default function Home() {
                 color: 'rgba(255, 255, 255, 0.88)',
                 fontSize: 'clamp(1rem, 1.8vw, 1.18rem)',
                 lineHeight: 1.65,
-                maxWidth: '560px',
+                maxWidth: '580px',
                 margin: '0 0 36px 0',
                 textShadow: '0 2px 12px rgba(0, 0, 0, 0.85)',
                 fontWeight: 400,
               }}>
-                Ett personligt byggföretag i Uppland med fokus på nybyggnation, renovering, ombyggnation och totalentreprenad med kvalitet i varje led.
+                Din lokala byggfirma med bas i Alfta. Vi utför tjänster inom grund & gjutningar, om- & tillbyggnader, takbyten och nybyggnation med högsta precision och yrkesstolthet.
               </p>
             </ScrollReveal>
 
@@ -244,7 +244,7 @@ export default function Home() {
                 <Button
                   variant="outline"
                   size="lg"
-                  href="tel:0722101075"
+                  href="tel:0706529936"
                   onClick={(e) => {
                     if (window.innerWidth > 768) {
                       e.preventDefault();
@@ -254,7 +254,7 @@ export default function Home() {
                 >
                   <span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
                     <Phone size={18} />
-                    Ring 072-210 10 75
+                    Ring 070-652 99 36
                   </span>
                 </Button>
               </div>
@@ -322,7 +322,7 @@ export default function Home() {
                   lineHeight: 1.65,
                   margin: '0 0 12px 0',
                 }}>
-                  Från nybyggnation och totalentreprenader till renoveringar och ombyggnationer i Uppland med omnejd.
+                  Från grund & gjutning till renovering, tillbyggnad och takbyte i Alfta, Edsbyn, Bollnäs och hela Hälsingland.
                 </p>
                 <Link
                   to="/tjanster"
@@ -462,7 +462,7 @@ export default function Home() {
             gap: '60px',
             alignItems: 'center',
           }}>
-            {/* Left: Company Logo Card */}
+            {/* Left: Company Logo Card (Transparent) */}
             <ScrollReveal animation="fade-left" duration={0.8}>
               <div style={{
                 position: 'relative',
@@ -473,7 +473,7 @@ export default function Home() {
                 overflow: 'hidden',
                 boxShadow: '0 12px 36px rgba(15, 23, 42, 0.08)',
                 border: '1px solid #e2e8f0',
-                background: '#ffffff',
+                background: '#f8fafc',
                 height: '380px',
                 display: 'flex',
                 alignItems: 'center',
@@ -481,13 +481,14 @@ export default function Home() {
                 padding: '36px',
               }}>
                 <img
-                  src="/logo.jpg"
-                  alt="JH Huskvalitet AB Logotyp"
+                  src="/logo-dark.png"
+                  alt="WSH Bygg Logotyp"
                   style={{
                     width: '100%',
                     height: '100%',
                     objectFit: 'contain',
                     display: 'block',
+                    filter: 'drop-shadow(0 4px 12px rgba(0,0,0,0.08))',
                   }}
                 />
               </div>
@@ -503,7 +504,7 @@ export default function Home() {
                   lineHeight: 1.2,
                   margin: '0 0 14px 0',
                 }}>
-                  Din lokala byggfirma i Uppland
+                  Din lokala byggfirma i Hälsingland
                 </h2>
               </ScrollReveal>
               <ScrollReveal animation="scale-x-left" delay={200} duration={0.6}>
@@ -516,16 +517,16 @@ export default function Home() {
                   lineHeight: 1.75,
                   margin: '0 0 32px 0',
                 }}>
-                  Bakom JH Huskvalitet står Viktor Johannesson. Vi tror på rak kommunikation, personlig kontakt och ett noggrant hantverk utan genvägar. Oavsett om du planerar en nybyggnation, tillbyggnad eller renovering finns vi med dig hela vägen från ritning till slutbesiktning.
+                  Bakom WSH Bygg står William Ehn med ett skickligt hantverksteam. Med bas i Alfta erbjuder vi gedigna bygg- och entreprenadtjänster i Ovanåkers kommun, Edsbyn, Bollnäs och hela Hälsingland. Vi tror på rak dialog, personlig kontakt och ett noggrant hantverk utan genvägar – från grund och gjutning till färdigt tak.
                 </p>
               </ScrollReveal>
               <ScrollReveal animation="fade-right" duration={0.8} delay={200}>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                   {[
                     'En och samma kontaktperson från start till mål',
-                    'Tydliga offerter, fasta priser och direkt ROT avdrag',
-                    'Noggrant hantverk anpassat efter dina önskemål',
-                    'Lokal närvaro och snabb service i hela Uppland',
+                    'Tydliga offerter, fasta priser och direkt ROT-avdrag',
+                    'Specialister på grundläggning, gjutning och träbyggnation',
+                    'Lokal närvaro och snabb service i hela Hälsingland',
                   ].map((item, i) => (
                     <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                       <CheckCircle2 size={24} color="var(--color-primary)" style={{ flexShrink: 0 }} />
@@ -794,27 +795,27 @@ export default function Home() {
           <div className="reviews-grid">
             {[
               {
-                name: 'Magnus Lindström',
-                location: 'Uppsala',
-                text: 'Vi anlitade JH Huskvalitet AB för en omfattande utbyggnad och nytt altandäck. Otroligt professionella från första platsbesöket till sista skruven. Hantverkarna höll rent och snyggt varje dag och tidsplanen hölls till punkt och pricka. Kan varmt rekommenderas!',
+                name: 'Per-Erik Jonsson',
+                location: 'Alfta',
+                text: 'Vi anlitade WSH Bygg för gjutning av betongplatta och stomresning till vårt nya garage. Otroligt proffsigt bemötande från William och gänget. Arbetet flöt på helt enligt tidsplanen och plattan blev spikrak. Riktigt duktiga hantverkare som vi gärna anlitar igen!',
                 stars: 5,
-                date: 'för 3 veckor sedan',
-                authorSub: 'Lokal guide • 12 omdömen',
+                date: 'för 2 veckor sedan',
+                authorSub: 'Lokal guide • 14 omdömen',
                 avatarUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=120&h=120'
               },
               {
-                name: 'Helena Bergqvist',
-                location: 'Enköping',
-                text: 'Riktigt nöjd med hjälpen vi fick vid vår husdränering och grundisolering. Bra dialog hela vägen, tydlig offert utan dolda kostnader och ett mycket noggrant utfört arbete. Känns tryggt inför höstrusket!',
+                name: 'Karin & Thomas Lind',
+                location: 'Edsbyn',
+                text: 'Vi tog hjälp av WSH Bygg för ett komplett takbyte och utbyggnad av vår veranda. Tydlig offert utan dolda kostnader, snyggt städat efter varje arbetsdag och ett fantastiskt slutresultat. Känns så tryggt att anlita lokala förmågor!',
                 stars: 5,
                 date: 'för en månad sedan',
-                authorSub: '6 omdömen',
+                authorSub: '7 omdömen',
                 avatarUrl: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=120&h=120'
               },
               {
-                name: 'Fredrik Söderlund',
-                location: 'Norrtälje',
-                text: 'JH Huskvalitet hjälpte oss med tomtplanering, markarbete och stensättning runt vår nybyggda villa. Otroligt skickliga på att hitta smarta lösningar för nivåskillnaderna på tomten. Resultatet blev över all förväntan.',
+                name: 'Stefan Wikström',
+                location: 'Bollnäs',
+                text: 'WSH Bygg utförde en omfattande renovering av golvbjälklag samt ny fasadpanel på vårt äldre trähus. Mycket noggranna med detaljerna och bra dialog genom hela projektet. Rekommenderas varmt till alla i Hälsingland!',
                 stars: 5,
                 date: 'för 2 månader sedan',
                 authorSub: 'Lokal guide • 19 omdömen',

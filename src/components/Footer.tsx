@@ -10,8 +10,8 @@ const serviceLinks = [
 ];
 
 const socialIcons = [
-  { Icon: Instagram, label: 'Instagram', href: 'https://www.instagram.com/jhhuskvalitetab' },
-  { Icon: Facebook, label: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61587212942833#' },
+  { Icon: Instagram, label: 'Instagram', href: 'https://www.instagram.com/wsh.bygg/' },
+  { Icon: Facebook, label: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61550844801002' },
 ];
 
 export default function Footer() {
@@ -43,7 +43,7 @@ export default function Footer() {
                   display: 'inline-block',
                 }}>
                   <img
-                    src={images.logoDark?.url || '/logo.jpg'}
+                    src={images.logoDark?.url || '/logo-dark.png'}
                     alt={images.logoDark?.alt || images.logo.alt}
                     style={{
                       height: '75px',
@@ -56,7 +56,7 @@ export default function Footer() {
               </Link>
             </div>
             <p style={{ color: 'var(--color-gray-600)', fontSize: '0.9rem', lineHeight: 1.7, margin: '0 0 20px 0' }}>
-              Professionellt entreprenadföretag med Uppland som utgångspunkt. Vi utför alla typer av entreprenad- och byggarbeten med stor precision.
+              Lokalt byggföretag med bas i Alfta. Vi utför tjänster inom grund & gjutningar, om- & tillbyggnader, takbyten och renovering i Ovanåkers kommun, Edsbyn, Bollnäs och hela Hälsingland.
             </p>
             <div style={{ display: 'flex', gap: '12px' }}>
               {socialIcons.map(({ Icon, label, href }) => (
@@ -129,23 +129,23 @@ export default function Footer() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '0.95rem' }}>
 
               <a
-                href="mailto:JHHuskvalitet@outlook.com"
+                href="mailto:ehn___@hotmail.com"
                 className="footer-contact-item"
               >
                 <div className="footer-contact-icon">
                   <Mail size={16} strokeWidth={2} />
                 </div>
-                <span>JHHuskvalitet@outlook.com</span>
+                <span>ehn___@hotmail.com</span>
               </a>
 
               <a
-                href="tel:0722101075"
+                href="tel:0706529936"
                 className="footer-contact-item"
               >
                 <div className="footer-contact-icon">
                   <Phone size={16} strokeWidth={2} />
                 </div>
-                <span>072-210 10 75</span>
+                <span>070-652 99 36</span>
               </a>
 
               <div
@@ -154,7 +154,7 @@ export default function Footer() {
                 <div className="footer-contact-icon">
                   <MapPin size={16} strokeWidth={2} />
                 </div>
-                <span>Uppland som utgångspunkt</span>
+                <span>Alfta • Edsbyn • Bollnäs • Hälsingland</span>
               </div>
             </div>
           </div>
@@ -176,7 +176,7 @@ export default function Footer() {
           }}
         >
           <div style={{ display: 'flex', gap: '12px', alignItems: 'center', color: 'var(--color-gray-600)', fontSize: '0.875rem', flexWrap: 'wrap' }}>
-            <span>© 2026 - JH Huskvalitet AB</span>
+            <span>© 2026 - WSH Bygg</span>
           </div>
         </div>
       </div>

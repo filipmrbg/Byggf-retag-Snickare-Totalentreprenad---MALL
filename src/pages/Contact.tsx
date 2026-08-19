@@ -13,20 +13,20 @@ const container: React.CSSProperties = {
 
 const faqItems = [
   {
-    question: 'Arbetar ni med ROT avdrag?',
-    answer: 'Ja, vi hanterar ROT avdrag och ser till att faktureringen sker korrekt. Arbeten som dränering och inkoppling av VA till befintliga hus berättigar till avdraget.',
+    question: 'Arbetar ni med ROT-avdrag?',
+    answer: 'Ja! Som privatperson får du 30 % avdrag på arbetskostnaden direkt på fakturan upp till 50 000 kr per person och år. Vi sköter all administration mot Skatteverket.',
   },
   {
     question: 'Hur lång tid tar det att få ett prisförslag?',
-    answer: 'Vi brukar återkomma med en offert inom 1 till 3 arbetsdagar efter platsbesöket, beroende på projektets omfattning.',
+    answer: 'Vi återkopplar vanligtvis inom 24 timmar och lämnar en tydlig, specificerad offert inom 1–3 arbetsdagar efter genomgång eller platsbesök.',
   },
   {
-    question: 'Tar ni på er jobb utanför Uppland?',
-    answer: 'Uppland är vår utgångspunkt, men vi kan ta uppdrag i närliggande områden vid större projekt. Hör av dig så berättar vi mer.',
+    question: 'Vilka områden i Hälsingland är ert huvudsakliga upptagningsområde?',
+    answer: 'Vi har vår bas i Alfta och utför regelbundet uppdrag i Ovanåkers kommun, Edsbyn, Bollnäs samt övriga delar av Hälsingland.',
   },
   {
-    question: 'Kan jag boka ett platsbesök direkt?',
-    answer: 'Absolut! Skicka ett meddelande via formuläret eller ring oss, så bokar vi in ett kostnadsfritt platsbesök som passar dig.',
+    question: 'Kan jag boka ett kostnadsfritt platsbesök?',
+    answer: 'Självklart! Kontakta oss via formuläret eller ring 070-652 99 36 så bokar vi in en tid som passar dig.',
   },
 ];
 
@@ -57,8 +57,8 @@ function blurInput(e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) 
 
 export default function Contact() {
   usePageTitle(
-    'Kontakta JH Huskvalitet AB | Offert och Rådgivning',
-    'Hör av dig till JH Huskvalitet AB för frågor, kostnadsfria platsbesök eller offert gällande ditt nästa projekt med Uppland som utgångspunkt.'
+    'Kontakta WSH Bygg | Offert och Rådgivning',
+    'Kontakta WSH Bygg i Alfta. Vi utför grund & gjutningar, om & tillbyggnader, takbyten och renoveringar i Alfta, Edsbyn, Bollnäs och Hälsingland. Ring 070-652 99 36.'
   );
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -71,14 +71,14 @@ export default function Contact() {
       {/* ── SECTION A: HERO ───────────────────────────────────── */}
       <section style={{
         position: 'relative',
-        backgroundImage: 'url(/hero-contact-mj.webp)',
+        backgroundImage: 'url(/hero-main.webp)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         paddingTop: '140px',
         paddingBottom: '60px',
         textAlign: 'center',
       }}>
-        <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.65)' }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'rgba(15, 23, 42, 0.75)' }} />
         <div style={{ ...container, position: 'relative', zIndex: 1 }}>
           <div>
             <ScrollReveal animation="blur-in">
@@ -93,7 +93,7 @@ export default function Contact() {
               </h1>
             </ScrollReveal>
             <ScrollReveal animation="fade-up" delay={150}>
-              <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1.05rem', margin: 0 }}>
+              <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '1.05rem', margin: 0 }}>
                 Vi återkopplar vanligtvis inom 24 timmar. Kostnadsfritt platsbesök ingår alltid.
               </p>
             </ScrollReveal>
@@ -123,7 +123,7 @@ export default function Contact() {
                 Så når du oss
               </h2>
               <p style={{ color: 'var(--color-gray-600)', fontSize: '1rem', lineHeight: 1.8, margin: 0 }}>
-                Du kan nå oss via formuläret, telefon eller e-post. Oavsett om det gäller ett stort eller litet entreprenad- eller markarbete hjälper vi dig gärna.
+                Du kan nå oss via formuläret, telefon eller e-post. Oavsett om det gäller grund & gjutning, takbyte, om- och tillbyggnad eller nybyggnation hjälper vi dig gärna.
               </p>
 
               <div style={{ marginTop: '40px', display: 'flex', flexDirection: 'column', gap: '24px' }}>
@@ -146,12 +146,12 @@ export default function Contact() {
                     </p>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
                       <a
-                        href="tel:0722101075"
+                        href="tel:0706529936"
                         style={{ color: 'var(--color-gray-600)', fontSize: '0.95rem', textDecoration: 'none', lineHeight: 1.5, transition: 'color 0.2s ease' }}
                         onMouseEnter={e => (e.currentTarget.style.color = 'var(--color-primary)')}
                         onMouseLeave={e => (e.currentTarget.style.color = 'var(--color-gray-600)')}
                       >
-                        072-210 10 75
+                        070-652 99 36
                       </a>
                     </div>
                   </div>
@@ -172,10 +172,10 @@ export default function Contact() {
                   </div>
                   <div>
                     <p style={{ margin: '0 0 4px 0', fontWeight: 700, fontSize: '0.9rem', color: 'var(--color-text-dark)' }}>
-                      Plats / Utgångspunkt
+                      Plats & Område
                     </p>
                     <p style={{ margin: 0, color: 'var(--color-gray-600)', fontSize: '0.95rem', lineHeight: 1.5 }}>
-                      Uppland som utgångspunkt
+                      Bas i Alfta • Ovanåkers kommun, Edsbyn, Bollnäs & hela Hälsingland
                     </p>
                   </div>
                 </div>
@@ -198,12 +198,12 @@ export default function Contact() {
                       E-post
                     </p>
                     <a
-                      href="mailto:JHHuskvalitet@outlook.com"
+                      href="mailto:ehn___@hotmail.com"
                       style={{ color: 'var(--color-gray-600)', fontSize: '0.95rem', textDecoration: 'none', lineHeight: 1.5, transition: 'color 0.2s ease' }}
                       onMouseEnter={e => (e.currentTarget.style.color = 'var(--color-primary)')}
                       onMouseLeave={e => (e.currentTarget.style.color = 'var(--color-gray-600)')}
                     >
-                      JHHuskvalitet@outlook.com
+                      ehn___@hotmail.com
                     </a>
                   </div>
                 </div>

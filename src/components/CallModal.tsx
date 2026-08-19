@@ -10,10 +10,10 @@ export default function CallModal({ isOpen, onClose }: CallModalProps) {
 
   const contacts = [
     {
-      name: 'JH Huskvalitet AB',
-      role: 'Kundtjänst och Offert',
-      phone: '072-210 10 75',
-      tel: 'tel:0722101075',
+      name: 'WSH Bygg',
+      role: 'William Ehn',
+      phone: '070-652 99 36',
+      tel: 'tel:0706529936',
     },
   ];
 
@@ -103,7 +103,7 @@ export default function CallModal({ isOpen, onClose }: CallModalProps) {
               fontFamily: 'var(--font-family)',
             }}
           >
-            Ring JH Huskvalitet AB
+            Ring WSH Bygg
           </h2>
           <p style={{ fontSize: '0.9rem', color: '#64748b', margin: 0, lineHeight: 1.5 }}>
             Kontakta oss direkt för rådgivning, frågor och kostnadsfri kalkyl.

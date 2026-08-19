@@ -14,8 +14,8 @@ const container: React.CSSProperties = {
 
 export default function ServicesOverview() {
   usePageTitle(
-    'Våra Tjänster | JH Huskvalitet AB Uppland',
-    'Utforska våra byggtjänster: Nybyggnation, Renovering, Ombyggnation och Totalentreprenad i Uppland med omnejd.'
+    'Våra Tjänster | WSH Bygg Alfta & Hälsingland',
+    'Utforska våra byggtjänster: Grund & gjutning, takbyte, om- och tillbyggnad, renovering och totalentreprenad i Alfta, Edsbyn, Bollnäs och Hälsingland.'
   );
 
   const { hash } = useLocation();
@@ -52,7 +52,7 @@ export default function ServicesOverview() {
       {/* ── HERO HEADER ──────────── */}
       <section style={{
         position: 'relative',
-        backgroundImage: 'url(/hero-services.png)',
+        backgroundImage: 'url(/hero-main.webp)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         paddingTop: '130px',
@@ -82,7 +82,7 @@ export default function ServicesOverview() {
               margin: '0 auto',
               lineHeight: 1.65,
             }}>
-              Vi på JH Huskvalitet AB erbjuder kompletta lösningar för din fastighet i Uppland med omnejd.
+              WSH Bygg erbjuder kompletta hantverks- och byggnadstjänster i Alfta, Edsbyn, Bollnäs och hela Hälsingland.
             </p>
           </ScrollReveal>
         </div>

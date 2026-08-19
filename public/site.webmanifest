@@ -1,16 +1,16 @@
 {
-  "name": "JH Huskvalitet AB",
-  "short_name": "JH Huskvalitet",
-  "description": "Professionellt entreprenad- och byggföretag med Uppland som utgångspunkt.",
+  "name": "WSH Bygg",
+  "short_name": "WSH Bygg",
+  "description": "Professionellt lokalt byggföretag med bas i Alfta. Vi utför tjänster inom grund & gjutningar, om & tillbyggnader, takbyten och totalentreprenad i Ovanåkers kommun, Edsbyn, Bollnäs och Hälsingland.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#ea580c",
   "icons": [
     {
-      "src": "/logo.jpg",
+      "src": "/logo.png",
       "sizes": "1024x1024",
-      "type": "image/jpeg"
+      "type": "image/png"
     }
   ]
 }

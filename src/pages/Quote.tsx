@@ -53,8 +53,8 @@ function blurInput(e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement | 
 
 export default function Quote() {
   usePageTitle(
-    'Begär offert | JH Huskvalitet AB',
-    'Beskriv ditt projekt och begär en kostnadsfri offert för entreprenad- och byggarbeten med Uppland som utgångspunkt.'
+    'Begär offert | WSH Bygg',
+    'Beskriv ditt projekt och begär en kostnadsfri offert för bygg-, gjutnings- eller renoveringsarbeten med Alfta och Hälsingland som bas.'
   );
   const [name, setName]       = useState('');
   const [email, setEmail]     = useState('');
@@ -75,7 +75,7 @@ export default function Quote() {
         paddingBottom: '60px',
         textAlign: 'center',
       }}>
-        <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.65)' }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'rgba(15, 23, 42, 0.75)' }} />
         <div style={{ ...container, position: 'relative', zIndex: 1 }}>
           <div>
             <ScrollReveal animation="blur-in">
@@ -100,7 +100,7 @@ export default function Quote() {
                 margin: '20px auto 0',
                 lineHeight: 1.65,
               }}>
-                Beskriv ditt projekt nedan så återkommer vi med en kostnadsfri offert och kalkyl inom 24 timmar.
+                Beskriv ditt projekt nedan så återkommer vi med en specificerad offert och kalkyl inom 24 timmar.
               </p>
             </ScrollReveal>
           </div>
@@ -189,9 +189,11 @@ export default function Quote() {
                     onBlur={blurInput}
                   >
                     <option value="">Välj tjänst...</option>
+                    <option value="grund-gjutning">Grund & Gjutning</option>
+                    <option value="takbyte">Takbyte</option>
+                    <option value="om-tillbyggnad">Om- & Tillbyggnad</option>
+                    <option value="renovering">Renovering & Finsnickeri</option>
                     <option value="nybyggnation">Nybyggnation</option>
-                    <option value="renovering">Renovering</option>
-                    <option value="ombyggnation">Ombyggnation</option>
                     <option value="totalentreprenad">Totalentreprenad</option>
                     <option value="annat">Annat projekt</option>
                   </select>

@@ -21,16 +21,29 @@ const accentLine: React.CSSProperties = {
 
 const teamMembers = [
   {
-    role: 'Ägare & Grundare',
-    name: 'Viktor Johannesson',
-    photo: '',
+    role: 'Ägare & Grundare / VD',
+    name: 'William Ehn',
+    initials: 'W',
+    description: 'Driver WSH Bygg med passion för gediget hantverk, personlig kontakt och trygga helhetslösningar.',
+  },
+  {
+    role: 'Yrkeshantverkare & Snickare',
+    name: 'Marcus Lindqvist',
+    initials: 'M',
+    description: 'Mångårig erfarenhet inom stomresning, takbyten, finsnickeri och interiöra renoveringar.',
+  },
+  {
+    role: 'Yrkeshantverkare & Grund / Betong',
+    name: 'Anton Berg',
+    initials: 'A',
+    description: 'Specialist på grundläggning, formsättning, armering, gjutning och anläggningsarbeten.',
   },
 ];
 
 export default function About() {
   usePageTitle(
-    'Om JH Huskvalitet AB | Vår Historia och Vision',
-    'Läs om JH Huskvalitet AB. Vi är ditt lokala företag i Uppland med omnejd för mark, bygg och tomtanläggning.'
+    'Om WSH Bygg | Vår Historia och Filosofi',
+    'Läs om WSH Bygg. Vi är ditt lokala byggföretag med bas i Alfta som utför grund & gjutning, om- & tillbyggnad, takbyte och renovering i Hälsingland.'
   );
   return (
     <main style={{ fontFamily: 'var(--font-family)' }}>
@@ -45,7 +58,7 @@ export default function About() {
         paddingBottom: '60px',
         textAlign: 'center',
       }}>
-        <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.65)' }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'rgba(15, 23, 42, 0.75)' }} />
         <div style={{ ...container, position: 'relative', zIndex: 1 }}>
           <div>
             <ScrollReveal animation="blur-in">
@@ -56,12 +69,12 @@ export default function About() {
                 margin: '0 0 16px 0',
                 lineHeight: 1.15,
               }}>
-                Om JH Huskvalitet AB
+                Om WSH Bygg
               </h1>
             </ScrollReveal>
             <ScrollReveal animation="fade-up" delay={150}>
-              <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1.05rem', margin: '0 auto', maxWidth: '600px' }}>
-                Med passion för kvalitet och hantverk med Uppland som hemmaplan.
+              <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '1.05rem', margin: '0 auto', maxWidth: '640px' }}>
+                Ett lokalt och engagerat byggföretag med bas i Alfta och verksamhet i hela Hälsingland.
               </p>
             </ScrollReveal>
           </div>
@@ -73,28 +86,31 @@ export default function About() {
         <div style={{ ...container, maxWidth: '960px' }}>
           <div className="about-content-grid" style={{
             display: 'grid',
-            gridTemplateColumns: '160px 1fr',
+            gridTemplateColumns: '200px 1fr',
             gap: '48px',
             alignItems: 'start',
           }}>
 
-            {/* Left: Logo */}
+            {/* Left: Logo (Transparent) */}
             <ScrollReveal animation="scale-in" easing="spring">
               <div style={{
                 position: 'sticky',
                 top: '120px',
+                display: 'flex',
+                justifyContent: 'center',
               }}>
                 <img
                   src={images.about.hero.url}
                   alt={images.about.hero.alt}
                   style={{
-                    width: '200px',
+                    width: '100%',
+                    maxWidth: '190px',
                     height: 'auto',
-                    maxHeight: '170px',
                     objectFit: 'contain',
                     backgroundColor: 'transparent',
                     padding: '0',
                     display: 'block',
+                    filter: 'drop-shadow(0 4px 12px rgba(0,0,0,0.08))',
                   }}
                 />
               </div>
@@ -111,7 +127,7 @@ export default function About() {
                   letterSpacing: '-0.03em',
                   margin: '0 0 20px 0',
                 }}>
-                  Om JH Huskvalitet AB
+                  Lokalt hantverk med hjärta i Hälsingland
                 </h2>
               </ScrollReveal>
               <ScrollReveal animation="fade-up" delay={100}>
@@ -123,11 +139,11 @@ export default function About() {
                     margin: '0 0 20px 0',
                     fontWeight: 500,
                   }}>
-                    JH Huskvalitet AB erbjuder byggtjänster med fokus på kvalitet, noggrannhet och hållbara lösningar. Vi hjälper dig från idé till färdigt resultat med trygghet, struktur och yrkesstolthet i varje steg.
+                    WSH Bygg grundades 2018 med en tydlig vision: att erbjuda pålitliga, högkvalitativa bygg- och hantverkstjänster med personlig service och ärlig kommunikation. Vi har vår bas i Alfta och är stolta över att hjälpa villaägare, fastighetsägare och företag i Ovanåkers kommun, Edsbyn, Bollnäs och resten av Hälsingland.
                   </p>
                   
                   <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--color-text-dark)', margin: '28px 0 12px 0' }}>
-                    Kvalitet, noggrannhet och hållbara lösningar
+                    Kvalitet från grund till färdigt tak
                   </h3>
                   <p style={{
                     color: 'var(--color-gray-600)',
@@ -135,7 +151,7 @@ export default function About() {
                     lineHeight: 1.8,
                     margin: '0 0 16px 0',
                   }}>
-                    Vi utför ett brett utbud av bygg och entreprenadtjänster med utgångspunkt i Uppland. Oavsett om det gäller renovering, tillbyggnad, anläggning eller nybyggnation ser vi till att projektet genomförs smidigt och med högsta standard.
+                    Vi erbjuder ett komplett utbud av tjänster inom bygg och entreprenad. Vår expertis sträcker sig från markförberedelser, formsättning och betonggjutning till om- och tillbyggnader, fasadarbeten, golvbjälklag och takbyten.
                   </p>
                   <p style={{
                     color: 'var(--color-gray-600)',
@@ -143,12 +159,12 @@ export default function About() {
                     lineHeight: 1.8,
                     margin: '0 0 24px 0',
                   }}>
-                    Under ett och samma tak levererar vi helhetslösningar anpassade efter dina behov och önskemål. För oss är inget projekt för litet eller för stort!
+                    När du anlitar oss får du en trygg samarbetspartner som tar fullt ansvar för kvalitet, tidsplan och noggrannhet. Inget jobb är för litet och inget för stort för vårt team.
                   </p>
 
                   {/* Founder Quote Card */}
                   <div style={{
-                    background: 'rgba(234, 88, 12, 0.05)',
+                    background: 'rgba(234, 88, 12, 0.06)',
                     borderLeft: '4px solid var(--color-primary)',
                     padding: '24px 28px',
                     borderRadius: '0 16px 16px 0',
@@ -162,7 +178,7 @@ export default function About() {
                       lineHeight: 1.7,
                       margin: '0 0 10px 0',
                     }}>
-                      "Att få förtroendet att förverkliga våra kunders drömmar och idéer genom personligt engagemang och yrkesstolt hantverk är vad som driver oss varje dag."
+                      "Att bygga och renovera handlar om förtroende. Vi sätter en stolthet i att alltid leverera hållbara resultat och hålla vad vi lovar till våra kunder."
                     </p>
                     <span style={{
                       color: 'var(--color-primary)',
@@ -170,7 +186,7 @@ export default function About() {
                       fontSize: '0.9rem',
                       display: 'block',
                     }}>
-                      Viktor Johannesson, Ägare och Grundare
+                      William Ehn, Ägare och Grundare av WSH Bygg
                     </span>
                   </div>
 
@@ -185,13 +201,10 @@ export default function About() {
         </div>
       </section>
 
-
-
-
-      {/* ── SECTION D: OWNER PROFILE ──────────────────────────── */}
-      <section style={{ background: 'var(--color-light)', padding: '90px 0' }}>
+      {/* ── SECTION D: TEAM PROFILES (3 PERSONS) ──────────────────────────── */}
+      <section style={{ background: '#ffffff', padding: '90px 0', borderTop: '1px solid #e2e8f0' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 clamp(20px, 5vw, 40px)' }}>
-          <div style={{ textAlign: 'center', marginBottom: '44px' }}>
+          <div style={{ textAlign: 'center', marginBottom: '50px' }}>
             <ScrollReveal animation="blur-in">
               <h2 style={{
                 color: 'var(--color-text-dark)',
@@ -200,7 +213,7 @@ export default function About() {
                 letterSpacing: '-0.03em',
                 margin: '0 0 12px 0',
               }}>
-                Grundare & Ägare
+                Möt vårt team
               </h2>
             </ScrollReveal>
             <ScrollReveal animation="fade-up" delay={100}>
@@ -208,61 +221,85 @@ export default function About() {
                 color: 'var(--color-gray-600)',
                 fontSize: '1rem',
                 lineHeight: 1.7,
-                maxWidth: '560px',
+                maxWidth: '580px',
                 margin: '0 auto',
               }}>
-                JH Huskvalitet AB grundades och drivs av Viktor Johannesson med passion för byggkvalitet och personlig service.
+                Erfarna och engagerade yrkeshantverkare som levererar kvalitet med bas i Alfta och uppdrag i hela Hälsingland.
               </p>
             </ScrollReveal>
           </div>
 
           <div style={{
-            maxWidth: '380px',
-            margin: '0 auto',
-          }}>
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+            gap: '28px',
+          }} className="team-grid">
             {teamMembers.map((member, i) => (
-              <ScrollReveal key={i} animation="slide-up-fade" delay={100}>
+              <ScrollReveal key={i} animation="slide-up-fade" delay={i * 120}>
                 <div style={{
-                  background: '#ffffff',
+                  background: '#f8fafc',
                   borderRadius: '20px',
                   overflow: 'hidden',
-                  border: '1px solid #e5e7eb',
-                  boxShadow: '0 8px 30px rgba(0, 0, 0, 0.07)',
-                  transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                  border: '1px solid #e2e8f0',
+                  boxShadow: '0 4px 20px rgba(0, 0, 0, 0.04)',
+                  transition: 'transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease',
                   textAlign: 'center',
-                }}>
-                  <div style={{ padding: '32px 28px' }}>
+                  height: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-6px)';
+                  e.currentTarget.style.boxShadow = '0 16px 36px rgba(0, 0, 0, 0.09)';
+                  e.currentTarget.style.borderColor = 'rgba(234, 88, 12, 0.3)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.04)';
+                  e.currentTarget.style.borderColor = '#e2e8f0';
+                }}
+                >
+                  <div style={{ padding: '36px 28px', flex: 1, display: 'flex', flexDirection: 'column' }}>
                     <div style={{
-                      width: '64px',
-                      height: '64px',
+                      width: '68px',
+                      height: '68px',
                       borderRadius: '50%',
-                      background: 'rgba(234, 88, 12, 0.1)',
-                      color: 'var(--color-primary)',
+                      background: i === 0 ? 'rgba(234, 88, 12, 0.12)' : 'rgba(15, 23, 42, 0.08)',
+                      color: i === 0 ? 'var(--color-primary)' : 'var(--color-text-dark)',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      fontSize: '1.8rem',
+                      fontSize: '1.7rem',
                       fontWeight: 800,
-                      margin: '0 auto 16px auto',
+                      margin: '0 auto 18px auto',
+                      border: i === 0 ? '2px solid rgba(234, 88, 12, 0.3)' : '2px solid rgba(15, 23, 42, 0.1)',
                     }}>
-                      V
+                      {member.initials}
                     </div>
                     <h3 style={{
                       color: 'var(--color-text-dark)',
                       fontWeight: 800,
-                      fontSize: '1.3rem',
+                      fontSize: '1.25rem',
                       margin: '0 0 6px 0',
                     }}>
                       {member.name}
                     </h3>
                     <p style={{
                       color: 'var(--color-primary)',
-                      fontSize: '0.95rem',
+                      fontSize: '0.9rem',
                       fontWeight: 700,
-                      margin: 0,
+                      margin: '0 0 14px 0',
                       lineHeight: 1.4,
                     }}>
                       {member.role}
+                    </p>
+                    <p style={{
+                      color: 'var(--color-gray-600)',
+                      fontSize: '0.88rem',
+                      lineHeight: 1.6,
+                      margin: 0,
+                    }}>
+                      {member.description}
                     </p>
                   </div>
                 </div>

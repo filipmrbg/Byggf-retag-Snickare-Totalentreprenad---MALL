@@ -75,54 +75,55 @@ export interface SiteImages {
 const images: SiteImages = {
   logo: {
     url: '/logo-white.png',
-    alt: 'JH Huskvalitet AB',
+    alt: 'WSH Bygg',
   },
   logoDark: {
-    url: '/logo.jpg',
-    alt: 'JH Huskvalitet AB',
+    url: '/logo-dark.png',
+    alt: 'WSH Bygg',
   },
 
   hero: {
     background: {
       url: '/hero-main.webp',
-      alt: 'Entreprenad och markarbete pågår',
+      alt: 'WSH Bygg hantverk och byggentreprenad',
     },
   },
 
   services: {
     nybyggnation: {
       url: '/service-smahusbyggnation.webp',
-      alt: 'Nybyggnation och trähus i Uppland',
+      alt: 'Nybyggnation av villor och fritidshus i Hälsingland',
     },
     smahusbyggnation: {
       url: '/service-smahusbyggnation.webp',
-      alt: 'Nybyggnation och trähus i Uppland',
+      alt: 'Nybyggnation av villor och fritidshus i Hälsingland',
     },
     renovering: {
       url: '/service-renovering.webp',
-      alt: 'Husrenovering och golvläggning',
+      alt: 'Renovering och hantverk i Alfta och Bollnäs',
     },
     ombyggnation: {
       url: '/service-ombyggnation.webp',
-      alt: 'Ombyggnation och tillbyggnad på villa',
+      alt: 'Ombyggnation, takbyte och tillbyggnad i Ovanåker',
     },
     totalentreprenad: {
       url: '/service-totalentreprenad.webp',
-      alt: 'Totalentreprenad och aktiv byggarbetsplats',
+      alt: 'Totalentreprenad och samordnade byggprojekt',
     },
   },
 
   gallery: [
-    { url: '/gallery-external-1.webp', alt: 'JH Huskvalitet AB arbete pågår 1' },
-    { url: '/gallery-external-2.webp', alt: 'JH Huskvalitet AB arbete pågår 2' },
-    { url: '/gallery-external-4.webp', alt: 'JH Huskvalitet AB arbete pågår 4' },
-    { url: '/gallery-external-3.webp', alt: 'JH Huskvalitet AB arbete pågår 5' },
+    { url: '/gallery-wsh-1.webp', alt: 'WSH Bygg golvrenovering och bjälklagsisolering' },
+    { url: '/gallery-wsh-2.webp', alt: 'WSH Bygg grundarbete och makadamläggning' },
+    { url: '/gallery-wsh-3.webp', alt: 'WSH Bygg altan och källarentré på klassisk villa' },
+    { url: '/gallery-wsh-4.webp', alt: 'WSH Bygg armering och formsättning för gjutning' },
+    { url: '/gallery-wsh-5.webp', alt: 'WSH Bygg nybyggt attefallshus med glaspartier' },
   ],
 
   cta: {
     banner: {
       url: '/hero-main.webp',
-      alt: 'JH Huskvalitet AB projekt',
+      alt: 'WSH Bygg projekt',
     },
     midSection: {
       url: '/hero-main.webp',
@@ -133,7 +134,7 @@ const images: SiteImages = {
   about: {
     hero: {
       url: '/logo-dark.png',
-      alt: 'JH Huskvalitet AB logotyp',
+      alt: 'WSH Bygg logotyp',
     },
     teamMember: {
       url: '/logo-white.png',
@@ -153,24 +154,29 @@ const images: SiteImages = {
 
   portfolio: [
     {
-      image: { url: '/gallery-external-1.webp', alt: 'JH Huskvalitet AB projekt 1' },
-      title: 'Projekt 1',
-      category: '',
+      image: { url: '/gallery-wsh-1.webp', alt: 'WSH Bygg golvrenovering' },
+      title: 'Golvbjälklag & Renovering',
+      category: 'Renovering',
     },
     {
-      image: { url: '/gallery-external-2.webp', alt: 'JH Huskvalitet AB projekt 2' },
-      title: 'Projekt 2',
-      category: '',
+      image: { url: '/gallery-wsh-2.webp', alt: 'WSH Bygg grundarbete' },
+      title: 'Grund & Markarbete',
+      category: 'Grundarbete',
     },
     {
-      image: { url: '/gallery-external-4.webp', alt: 'JH Huskvalitet AB projekt 4' },
-      title: 'Projekt 4',
-      category: '',
+      image: { url: '/gallery-wsh-3.webp', alt: 'WSH Bygg altan och entré' },
+      title: 'Altan & Källarentré',
+      category: 'Tillbyggnad',
     },
     {
-      image: { url: '/gallery-external-3.webp', alt: 'JH Huskvalitet AB projekt 5' },
-      title: 'Projekt 5',
-      category: '',
+      image: { url: '/gallery-wsh-4.webp', alt: 'WSH Bygg gjutning och armering' },
+      title: 'Betonggjutning & Formning',
+      category: 'Gjutning',
+    },
+    {
+      image: { url: '/gallery-wsh-5.webp', alt: 'WSH Bygg attefallshus' },
+      title: 'Nybyggt Attefallshus',
+      category: 'Nybyggnation',
     },
   ],
 

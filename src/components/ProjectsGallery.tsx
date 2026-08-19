@@ -13,33 +13,33 @@ interface ReferenceItem {
 const references: ReferenceItem[] = [
   {
     id: '1',
-    image: '/service-smahusbyggnation.webp',
-    alt: 'Nybyggnation i Uppland',
+    image: '/gallery-wsh-5.webp',
+    alt: 'WSH Bygg nybyggt attefallshus och träbyggnad',
   },
   {
     id: '2',
-    image: '/portfolio-extension.webp',
-    alt: 'Tillbyggnad på villa',
+    image: '/gallery-wsh-3.webp',
+    alt: 'WSH Bygg altan och källarentré i Hälsingland',
   },
   {
     id: '3',
-    image: '/gallery-deck.webp',
-    alt: 'Platsbyggt trädäck och altan',
+    image: '/gallery-wsh-1.webp',
+    alt: 'WSH Bygg renovering av golvbjälklag och isolering',
   },
   {
     id: '4',
-    image: '/gallery-kitchen.webp',
-    alt: 'Köksrenovering och finsnickeri',
+    image: '/gallery-wsh-4.webp',
+    alt: 'WSH Bygg armering och formsättning för betonggjutning',
   },
   {
     id: '5',
-    image: '/gallery-bathroom.webp',
-    alt: 'Badrumsrenovering',
+    image: '/gallery-wsh-2.webp',
+    alt: 'WSH Bygg grundarbete och förberedelse för husgrund',
   },
   {
     id: '6',
-    image: '/portfolio-facade.webp',
-    alt: 'Fasadbyte och panelarbete',
+    image: '/service-smahusbyggnation.webp',
+    alt: 'WSH Bygg nybyggnation och trähus',
   },
 ];
 
