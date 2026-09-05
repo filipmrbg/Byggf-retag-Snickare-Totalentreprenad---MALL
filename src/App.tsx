@@ -11,27 +11,29 @@ const ServicesOverview = lazy(() => import('./pages/ServicesOverview'));
 const Animations = lazy(() => import('./pages/Animations'));
 
 function ScrollToTop() {
-  const { pathname, state } = useLocation();
+  const { pathname, hash, state } = useLocation();
   useEffect(() => {
     document.body.style.overflow = '';
-    const scrollTo = (state as { scrollTo?: string } | null)?.scrollTo;
-    if (scrollTo) {
+    const targetId = (state as { scrollTo?: string } | null)?.scrollTo || (hash ? hash.replace('#', '') : null);
+    if (targetId) {
       const attempt = () => {
-        const el = document.getElementById(scrollTo);
+        const el = document.getElementById(targetId);
         if (el) {
           const y = el.getBoundingClientRect().top + window.pageYOffset - 90;
           window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
         }
       };
-      const t1 = setTimeout(attempt, 120);
-      const t2 = setTimeout(attempt, 400);
+      const t1 = setTimeout(attempt, 80);
+      const t2 = setTimeout(attempt, 250);
+      const t3 = setTimeout(attempt, 500);
       return () => {
         clearTimeout(t1);
         clearTimeout(t2);
+        clearTimeout(t3);
       };
     }
     window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior });
-  }, [pathname, state]);
+  }, [pathname, hash, state]);
   return null;
 }
 

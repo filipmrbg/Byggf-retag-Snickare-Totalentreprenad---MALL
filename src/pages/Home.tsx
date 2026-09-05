@@ -269,26 +269,26 @@ export default function Home() {
         onClose={() => setIsCallModalOpen(false)}
       />
 
-      {/* ── SECTION 2: VÅRA TJÄNSTER (MODERN CLEAN PHOTO CARDS) ───── */}
+      {/* ── SECTION 2: VÅRA TJÄNSTER (CLEAN CRAFT DESIGN) ───────── */}
       <section
         id="tjanster"
         style={{
           background: '#f8fafc',
-          padding: 'clamp(80px, 10vw, 120px) 0',
+          padding: 'clamp(72px, 8vw, 100px) 0',
           borderTop: '1px solid #e2e8f0',
         }}
       >
         <div style={container}>
-          {/* Clean Authentic Split-Header */}
+          {/* Section Header */}
           <div style={{
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'flex-end',
             flexWrap: 'wrap',
             gap: '24px',
-            marginBottom: '44px',
+            marginBottom: '40px',
           }}>
-            <div style={{ maxWidth: '580px' }}>
+            <div style={{ maxWidth: '560px' }}>
               <ScrollReveal animation="fade-right">
                 <span style={{
                   color: 'var(--color-primary)',
@@ -304,10 +304,10 @@ export default function Home() {
                 <h2 style={{
                   color: 'var(--color-text-dark)',
                   fontWeight: 800,
-                  fontSize: 'clamp(1.9rem, 3.6vw, 2.7rem)',
-                  letterSpacing: '-0.025em',
+                  fontSize: 'clamp(1.9rem, 3.4vw, 2.5rem)',
+                  letterSpacing: '-0.02em',
                   margin: 0,
-                  lineHeight: 1.18,
+                  lineHeight: 1.2,
                 }}>
                   Byggtjänster med fokus på kvalitet
                 </h2>
@@ -315,14 +315,14 @@ export default function Home() {
             </div>
 
             <div style={{ maxWidth: '420px' }}>
-              <ScrollReveal animation="fade-left" delay={150}>
+              <ScrollReveal animation="fade-left" delay={100}>
                 <p style={{
                   color: 'var(--color-gray-600)',
-                  fontSize: '1rem',
-                  lineHeight: 1.65,
-                  margin: '0 0 12px 0',
+                  fontSize: '0.96rem',
+                  lineHeight: 1.6,
+                  margin: '0 0 10px 0',
                 }}>
-                  Från grund & gjutning till renovering, tillbyggnad och takbyte i Alfta, Edsbyn, Bollnäs och hela Hälsingland.
+                  Från stabil grund och formsättning till färdigställd villa, tillbyggnad och takbyte i Alfta, Edsbyn, Bollnäs och Hälsingland.
                 </p>
                 <Link
                   to="/tjanster"
@@ -332,110 +332,46 @@ export default function Home() {
                     gap: '6px',
                     color: 'var(--color-primary)',
                     fontWeight: 700,
-                    fontSize: '0.92rem',
+                    fontSize: '0.9rem',
                     textDecoration: 'none',
                   }}
                 >
-                  Utforska alla tjänster <ArrowRight size={16} />
+                  Utforska alla tjänster <ArrowRight size={15} />
                 </Link>
               </ScrollReveal>
             </div>
           </div>
 
-          {/* Clean Modern Photo Grid */}
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(270px, 1fr))',
-            gap: '28px',
-          }}>
+          {/* Clean 3x2 Grid */}
+          <div className="clean-services-grid">
             {services.map((svc: ServiceItem, index: number) => (
-              <ScrollReveal key={svc.slug} animation="fade-up" delay={index * 90}>
+              <ScrollReveal key={svc.slug} animation="fade-up" delay={index * 50}>
                 <Link
                   to={svc.href}
-                  className="modern-photo-card"
-                  style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    background: '#ffffff',
-                    borderRadius: '16px',
-                    overflow: 'hidden',
-                    textDecoration: 'none',
-                    border: '1px solid #e2e8f0',
-                    boxShadow: '0 4px 20px rgba(15, 23, 42, 0.05)',
-                    transition: 'all 0.35s cubic-bezier(0.16, 1, 0.3, 1)',
-                    height: '100%',
-                  }}
-                  onMouseEnter={(e) => {
-                    const card = e.currentTarget;
-                    card.style.transform = 'translateY(-6px)';
-                    card.style.boxShadow = '0 20px 40px rgba(15, 23, 42, 0.12)';
-                    card.style.borderColor = 'rgba(234, 88, 12, 0.3)';
-                    const img = card.querySelector('.card-photo') as HTMLElement;
-                    if (img) img.style.transform = 'scale(1.06)';
-                  }}
-                  onMouseLeave={(e) => {
-                    const card = e.currentTarget;
-                    card.style.transform = 'translateY(0)';
-                    card.style.boxShadow = '0 4px 20px rgba(15, 23, 42, 0.05)';
-                    card.style.borderColor = '#e2e8f0';
-                    const img = card.querySelector('.card-photo') as HTMLElement;
-                    if (img) img.style.transform = 'scale(1)';
-                  }}
+                  className="clean-service-card"
                 >
-                  {/* Photo Container */}
-                  <div style={{
-                    position: 'relative',
-                    width: '100%',
-                    height: '210px',
-                    overflow: 'hidden',
-                    background: '#0f172a',
-                  }}>
+                  {/* Clean Natural Photo Container */}
+                  <div className="clean-card-img-wrap">
                     <img
                       src={svc.image}
                       alt={svc.title}
                       loading="lazy"
-                      className="card-photo"
-                      style={{
-                        width: '100%',
-                        height: '100%',
-                        objectFit: 'cover',
-                        display: 'block',
-                        transition: 'transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)',
-                      }}
+                      className="clean-card-img"
                     />
-                    <div style={{
-                      position: 'absolute',
-                      inset: 0,
-                      background: 'linear-gradient(180deg, transparent 50%, rgba(15, 23, 42, 0.4) 100%)',
-                      pointerEvents: 'none',
-                    }} />
                   </div>
 
-                  {/* Content Container */}
-                  <div style={{
-                    padding: '24px',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    flex: 1,
-                  }}>
-                    <h3 style={{
-                      color: 'var(--color-text-dark)',
-                      fontWeight: 700,
-                      fontSize: '1.2rem',
-                      margin: '0 0 10px 0',
-                      letterSpacing: '-0.01em',
-                    }}>
+                  {/* Card Content */}
+                  <div className="clean-card-body">
+                    <h3 className="clean-card-title">
                       {svc.title}
                     </h3>
-                    <p style={{
-                      color: 'var(--color-gray-600)',
-                      fontSize: '0.93rem',
-                      lineHeight: 1.65,
-                      margin: 0,
-                      flex: 1,
-                    }}>
+                    <p className="clean-card-desc">
                       {svc.shortDescription}
                     </p>
+                    <div className="clean-card-link">
+                      <span>Läs mer</span>
+                      <ArrowRight size={15} />
+                    </div>
                   </div>
                 </Link>
               </ScrollReveal>
@@ -444,9 +380,9 @@ export default function Home() {
 
           {/* Centered Button Underneath Grid */}
           <div style={{ textAlign: 'center', marginTop: '48px' }}>
-            <ScrollReveal animation="fade-up" delay={200}>
-              <Button variant="primary" href="/tjanster" size="lg">
-                Läs mer om våra tjänster <ArrowRight size={18} />
+            <ScrollReveal animation="fade-up" delay={150}>
+              <Button variant="primary" href="/offert" size="lg">
+                Begär kostnadsfri offert <ArrowRight size={18} />
               </Button>
             </ScrollReveal>
           </div>
@@ -517,7 +453,7 @@ export default function Home() {
                   lineHeight: 1.75,
                   margin: '0 0 32px 0',
                 }}>
-                  Bakom WSH Bygg står William Ehn med ett skickligt hantverksteam. Med bas i Alfta erbjuder vi gedigna bygg- och entreprenadtjänster i Ovanåkers kommun, Edsbyn, Bollnäs och hela Hälsingland. Vi tror på rak dialog, personlig kontakt och ett noggrant hantverk utan genvägar – från grund och gjutning till färdigt tak.
+                  WSH Bygg drivs av Robin Ehn, lokal snickare med bas i Alfta. Vi erbjuder gedigna byggtjänster i Ovanåkers kommun, Edsbyn, Bollnäs och hela Hälsingland. Vi tror på rak dialog, personlig kontakt och ett noggrant hantverk utan genvägar – från grund och gjutning till färdigt tak.
                 </p>
               </ScrollReveal>
               <ScrollReveal animation="fade-right" duration={0.8} delay={200}>
@@ -797,7 +733,7 @@ export default function Home() {
               {
                 name: 'Per-Erik Jonsson',
                 location: 'Alfta',
-                text: 'Vi anlitade WSH Bygg för gjutning av betongplatta och stomresning till vårt nya garage. Otroligt proffsigt bemötande från William och gänget. Arbetet flöt på helt enligt tidsplanen och plattan blev spikrak. Riktigt duktiga hantverkare som vi gärna anlitar igen!',
+                text: 'Vi anlitade WSH Bygg för gjutning av betongplatta och stomresning till vårt nya garage. Otroligt proffsigt bemötande från Robin och gänget. Arbetet flöt på helt enligt tidsplanen och plattan blev spikrak. Riktigt duktiga hantverkare som vi gärna anlitar igen!',
                 stars: 5,
                 date: 'för 2 veckor sedan',
                 authorSub: 'Lokal guide • 14 omdömen',
@@ -962,6 +898,94 @@ export default function Home() {
         .review-card-el:hover {
           transform: translateY(-5px) rotate(-0.5deg);
           box-shadow: 0 16px 40px rgba(28,21,16,0.10);
+        }
+        /* Clean Construction Services Grid */
+        .clean-services-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 24px;
+        }
+        .clean-service-card {
+          display: flex;
+          flex-direction: column;
+          background: #ffffff;
+          border-radius: 14px;
+          overflow: hidden;
+          text-decoration: none;
+          border: 1px solid #e2e8f0;
+          box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+          transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+          height: 100%;
+        }
+        .clean-service-card:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+          border-color: #cbd5e1;
+        }
+        .clean-card-img-wrap {
+          position: relative;
+          width: 100%;
+          height: 210px;
+          overflow: hidden;
+          background: #f1f5f9;
+        }
+        .clean-card-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+          transition: transform 0.4s ease;
+        }
+        .clean-service-card:hover .clean-card-img {
+          transform: scale(1.04);
+        }
+        .clean-card-body {
+          padding: 22px 24px;
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+        }
+        .clean-card-title {
+          color: #0f172a;
+          font-weight: 700;
+          fontSize: 1.2rem;
+          margin: 0 0 8px 0;
+          line-height: 1.3;
+        }
+        .clean-card-desc {
+          color: #64748b;
+          font-size: 0.92rem;
+          line-height: 1.6;
+          margin: 0 0 18px 0;
+          flex: 1;
+        }
+        .clean-card-link {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          color: var(--color-primary);
+          font-weight: 700;
+          font-size: 0.88rem;
+          margin-top: auto;
+          transition: gap 0.2s ease;
+        }
+        .clean-service-card:hover .clean-card-link {
+          gap: 9px;
+        }
+        @media (max-width: 992px) {
+          .clean-services-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 20px !important;
+          }
+        }
+        @media (max-width: 640px) {
+          .clean-services-grid {
+            grid-template-columns: 1fr !important;
+            gap: 16px !important;
+          }
+          .clean-card-img-wrap {
+            height: 190px;
+          }
         }
         .step-arrow {
           display: flex;

@@ -5,8 +5,10 @@ import images from '../data/images';
 const serviceLinks = [
   { label: 'Nybyggnation', href: '/tjanster#nybyggnation' },
   { label: 'Renovering', href: '/tjanster#renovering' },
-  { label: 'Ombyggnation', href: '/tjanster#ombyggnation' },
-  { label: 'Totalentreprenad', href: '/tjanster#totalentreprenad' },
+  { label: 'Tillbyggnad', href: '/tjanster#tillbyggnad' },
+  { label: 'Takbyte', href: '/tjanster#takbyte' },
+  { label: 'Gjutningar', href: '/tjanster#gjutning' },
+  { label: 'Garage', href: '/tjanster#garage' },
 ];
 
 const socialIcons = [
@@ -45,6 +47,8 @@ export default function Footer() {
                   <img
                     src={images.logoDark?.url || '/logo-dark.png'}
                     alt={images.logoDark?.alt || images.logo.alt}
+                    loading="lazy"
+                    decoding="async"
                     style={{
                       height: '75px',
                       width: 'auto',
@@ -129,13 +133,13 @@ export default function Footer() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '0.95rem' }}>
 
               <a
-                href="mailto:ehn___@hotmail.com"
+                href="mailto:wshbygg@gmail.com"
                 className="footer-contact-item"
               >
                 <div className="footer-contact-icon">
                   <Mail size={16} strokeWidth={2} />
                 </div>
-                <span>ehn___@hotmail.com</span>
+                <span>wshbygg@gmail.com</span>
               </a>
 
               <a

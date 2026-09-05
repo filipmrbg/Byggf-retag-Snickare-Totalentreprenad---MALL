@@ -15,7 +15,7 @@ const container: React.CSSProperties = {
 export default function ServicesOverview() {
   usePageTitle(
     'Våra Tjänster | WSH Bygg Alfta & Hälsingland',
-    'Utforska våra byggtjänster: Grund & gjutning, takbyte, om- och tillbyggnad, renovering och totalentreprenad i Alfta, Edsbyn, Bollnäs och Hälsingland.'
+    'Utforska våra byggtjänster: Nybyggnation, renovering, tillbyggnad, takbyte, gjutningar och garage i Alfta, Edsbyn, Bollnäs och Hälsingland.'
   );
 
   const { hash } = useLocation();
@@ -52,7 +52,7 @@ export default function ServicesOverview() {
       {/* ── HERO HEADER ──────────── */}
       <section style={{
         position: 'relative',
-        backgroundImage: 'url(/hero-main.webp)',
+        backgroundImage: 'url(/hero-services.webp)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         paddingTop: '130px',
@@ -180,6 +180,8 @@ export default function ServicesOverview() {
                         <img
                           src={svc.image}
                           alt={svc.title}
+                          loading="lazy"
+                          decoding="async"
                           style={{
                             width: '100%',
                             height: '100%',

@@ -86,11 +86,11 @@ Vi tar hand om hela byggkedjan: från markförberedelser, gjutning av stabil bet
     heroText: 'Ge ditt hus nytt liv med professionell renovering i Alfta, Edsbyn, Bollnäs och Hälsingland.',
     detailedDescription: `Oavsett om det gäller att renovera ett äldre trähus, byta ut golvbjälklag, fräscha upp ytskikten eller genomföra en helrenovering av villan levererar vi hantverk med precision.
 
-Vi kombinerar moderna byggtekniker med respekt för husets ursprungliga själ och karaktär. Vårt erfarna team ser till att renoveringen blir både funktionell, snygg och långsiktigt hållbar. Självklart hjälper vi dig att nyttja ROT-avdraget med 30 % direkt på fakturan.`,
+Vi kombinerar moderna byggtekniker med respekt för husets ursprungliga själ och karaktär, och ser till att renoveringen blir både funktionell, snygg och långsiktigt hållbar. Självklart hjälper vi dig att nyttja ROT-avdraget med 30 % direkt på fakturan.`,
     heroImage: '/service-renovering.webp',
     image: '/service-renovering.webp',
     href: '/tjanster#renovering',
-    tag: 'Invändigt & Utvändigt',
+    tag: 'Renovering',
     badge: 'ROT avdrag',
     highlights: [
       'Totalrenovering och delrenovering av villor och gårdar',
@@ -106,7 +106,7 @@ Vi kombinerar moderna byggtekniker med respekt för husets ursprungliga själ oc
           'Golv & Bjälklag: Riktning, isolering och nytt trägolv eller parkett',
           'Fasad & Tak: Nya paneler, tilläggsisolering och komplett takbyte',
           'Interiör: Montering av kök, lister och innerväggar',
-          'Altaner & Uterum: Bygge av trädäck och inglasade partier',
+          'Altaner: Bygge av trädäck och inglasade partier',
         ],
       },
     ],
@@ -122,23 +122,23 @@ Vi kombinerar moderna byggtekniker med respekt för husets ursprungliga själ oc
     ],
   },
   {
-    slug: 'ombyggnation',
-    title: 'Om- & Tillbyggnad',
-    shortDescription: 'Behöver du mer boyta eller ny planlösning? Vi utför tillbyggnader, taklyft, takbyten och utbyggnader med perfekt passform.',
-    heroText: 'Väx i ditt nuvarande hem. Vi utför om- och tillbyggnader samt takbyten med högsta kvalitet i Hälsingland.',
-    detailedDescription: `När familjen växer eller behoven ändras är en tillbyggnad eller ombyggnation det smartaste sättet att få mer yta utan att behöva flytta.
+    slug: 'tillbyggnad',
+    title: 'Tillbyggnad',
+    shortDescription: 'Behöver du mer boyta eller nya rum? Vi utför kundanpassade tillbyggnader och utbyggnader med perfekt passform för ditt hus.',
+    heroText: 'Väx i ditt nuvarande hem. Vi utför gedigna tillbyggnader med högsta kvalitet i Hälsingland.',
+    detailedDescription: `När familjen växer eller behoven ändras är en tillbyggnad det smartaste sättet att få mer yta utan att behöva flytta.
 
-WSH Bygg hanterar allt från att bygga ut villan med nya sovrum eller rymligt vardagsrum till att byta tak, bygga isolerade uterum, förstärka bärande konstruktioner eller ändra planlösningen. Vi ser till att den nya delen smälter in harmoniskt med husets befintliga arkitektur.`,
+WSH Bygg hanterar allt från att bygga ut villan med nya sovrum eller rymligt vardagsrum till att bygga isolerade uterum och förstärka bärande konstruktioner. Vi ser till att den nya delen smälter in harmoniskt med husets befintliga arkitektur och uppfyller alla krav på isolering och hållbarhet.`,
     heroImage: '/service-ombyggnation.webp',
     image: '/service-ombyggnation.webp',
-    href: '/tjanster#ombyggnation',
-    tag: 'Tillbyggnad & Takbyte',
+    href: '/tjanster#tillbyggnad',
+    tag: 'Tillbyggnad',
     badge: 'Flexibla lösningar',
     highlights: [
-      'Tillbyggnad av villa, fritidshus och garage',
-      'Kompletta takbyten med betongpannor, plåt eller tegel',
+      'Tillbyggnad av villa, fritidshus och gård',
+      'Utökad boyta och genomtänkt rumsindelning',
       'Öppna upp planlösningar och avväxling av bärande väggar',
-      'Uterum, verandor och trädäck',
+      'Verandor, uterum och generösa sällskapsytor',
     ],
     sections: [
       {
@@ -146,58 +146,146 @@ WSH Bygg hanterar allt från att bygga ut villan med nya sovrum eller rymligt va
         text: 'En genomtänkt tillbyggnad ökar både livskvaliteten och fastighetens marknadsvärde. Vi säkerställer att grundläggning och stomme dimensioneras med högsta bärighet och hållbarhet.',
         bullets: [
           'Husutbyggnad: Extra boyta, master bedroom eller större sällskapsytor',
-          'Takbyte: Komplett byte av råspont, papp, läkt och takpannor',
-          'Altaner & Verandor: Rejäla trädäck anpassade för tomtens nivåer',
-          'Garage & Carport: Isolerade eller oisolerade byggnader på gjuten platta',
+          'Uterum & Verandor: Rejäla tillbyggnader anpassade för åretruntbruk',
+          'Konstruktion: Dimensionering av stomme, balkar och bärande väggar',
+          'Ytskikt: Komplett inredning med golv, panel och listverk',
         ],
       },
     ],
     faq: [
       {
         question: 'Krävs det bygglov för en tillbyggnad?',
-        answer: 'Tillbyggnader upp till 15 kvm (Attefall) kräver ofta endast anmälan, medan större tillbyggnader eller fasadändringar kräver bygglov. Vi hjälper gärna till med ritningar och underlag inför din ansökan.',
+        answer: 'Tillbyggnader upp till 15 kvm (Attefall) kräver ofta endast anmälan, medan större tillbyggnader kräver bygglov. Vi hjälper gärna till med ritningar och underlag inför din ansökan.',
       },
     ],
   },
   {
-    slug: 'totalentreprenad',
-    title: 'Totalentreprenad & Grund',
-    shortDescription: 'Ett samlat ansvar från schaktning och gjutning till färdigställt bygge – en kontaktperson och full trygghet genom hela projektet.',
-    heroText: 'Bekymmersfritt byggande med en helhetsansvarig partner i Alfta, Edsbyn, Bollnäs och Hälsingland.',
-    detailedDescription: `Med totalentreprenad från WSH Bygg slipper du krånglet med att samordna olika hantverkare och entreprenörer.
+    slug: 'takbyte',
+    title: 'Takbyte',
+    shortDescription: 'Kompletta takbyten med tegel, betongpannor eller plåt som ger ditt hus ett säkert, tätt och hållbart klimatskal året om.',
+    heroText: 'Säkra och slitstarka tak i Alfta, Edsbyn, Bollnäs och Hälsingland. Komplett takläggning med garanti.',
+    detailedDescription: `Ett välmående tak är husets viktigaste skydd mot väder och vind. Vi på WSH Bygg utför kompletta takbyten för villor, fritidshus och fastigheter i hela Hälsingland.
 
-Vi tar det samlade ansvaret för hela byggnationen: från grund- och markarbeten med gjuten betongplatta till snickeri, tak, el, VVS och målning. Du har en och samma kontaktperson genom hela processen med full koll på budget, tidsplan och kvalitet fram till godkänd slutbesiktning.`,
-    heroImage: '/service-totalentreprenad.webp',
-    image: '/service-totalentreprenad.webp',
-    href: '/tjanster#totalentreprenad',
-    tag: 'Helhetslösning',
-    badge: '100% Trygghet',
+Vi byter råspont, underlagspapp, läkt och lägger nya betongpannor, tegelpannor eller plåt. Vi ser även över taksäkerhet, vindskivor, hängrännor och tilläggsisolering för ett energieffektivt och tryggt hem.`,
+    heroImage: '/portfolio-roofing.webp',
+    image: '/portfolio-roofing.webp',
+    href: '/tjanster#takbyte',
+    tag: 'Takbyte',
+    badge: 'Tätt & Tryggt',
     highlights: [
-      'En ansvarig kontaktperson genom hela bygget',
-      'Specialistkunskap inom grundläggning & betonggjutning',
-      'Komplett samordning av alla hantverksgrupper',
-      'Tydlig budget, fasta avtal och full ansvarsförsäkring',
+      'Komplett takbyte med tegel, betongpannor eller plåt',
+      'Byte av råspont, underlagspapp och bärläkt',
+      'Montering av taksäkerhet, hängrännor och stuprör',
+      'ROT-avdrag med 30% direkt på fakturan',
     ],
     sections: [
       {
-        heading: 'Tryggt, strukturerat och transparent',
-        text: 'Totalentreprenad är det smidigaste och säkraste valet för dig som beställare. Vi bär ansvaret för utförande och samordning så att du kan fokusera på det roliga.',
+        heading: 'Trygga takbyten utförda enligt branschstandard',
+        text: 'Ett takbyte är en av de mest värdehöjande investeringarna du kan göra på ditt hus. Vi genomför en grundlig besiktning av undertaket och säkerställer att ventilation och isolering fungerar optimalt.',
         bullets: [
-          'Projektledning: Regelbunden avstämning och tydlig tidsplan',
-          'Grund & Gjutning: Professionell formsättning, armering och gjuten platta',
-          'Kvalitetssäkrade samarbeten: Certifierade elektriker och behöriga VVS-montörer',
-          'Garanti & Dokumentation: Fullständiga egenkontroller och garantier',
+          'Undertak: Kontroll och byte av rötskadad råspont och ny slitstark underlagspapp',
+          'Takbeklädnad: Nya pannor eller plåttak anpassade för Hälsinglands snörika vintrar',
+          'Plåtarbeten: Vindskiveplåt, ränndalar och skorstensbeslag',
+          'Säkerhet: Snörasskydd, taksteg och takbryggor',
         ],
       },
     ],
     faq: [
       {
-        question: 'Vad är fördelen med totalentreprenad?',
-        answer: 'Med totalentreprenad har du ett enda avtal och en enda ansvarig partner. Det minimerar risker för missförstånd eller förseningar och gör projektet betydligt smidigare för dig.',
+        question: 'Hur ofta behöver man byta tak?',
+        answer: 'Ett tegeltak eller betongpannetak håller vanligtvis mellan 30 och 50 år, men underlagspappen under pannorna kan behöva bytas efter 25–35 år för att garantera full fuktsäkerhet.',
       },
       {
-        question: 'Hur sätter ni upp offerten?',
-        answer: 'Vi lämnar en specificerad och transparent offert där alla moment ingår så att du vet exakt vad som ingår utan oväntade tillägg.',
+        question: 'Hur lång tid tar ett normalt takbyte?',
+        answer: 'Ett normalstort villatak tar vanligtvis 1–2 veckor att byta helt, beroende på väderlek och undertakets skick.',
+      },
+    ],
+  },
+  {
+    slug: 'gjutning',
+    title: 'Gjutningar',
+    shortDescription: 'Professionella betonggjutningar för husgrunder, garageplattor, stödmurar och maskinhallar med laserprecision och högsta hållfasthet.',
+    heroText: 'Stabila husgrunder och tåliga betonggjutningar i Alfta, Edsbyn, Bollnäs och hela Hälsingland.',
+    detailedDescription: `En gedigen och välutförd gjutning är grunden för varje lyckat byggprojekt. Hos WSH Bygg har vi stor erfarenhet och specialistkunskap inom alla typer av betonggjutningar och grundläggningsarbeten.
+
+Vi utför allt från gjutning av isolerade betongplattor på mark för villor, fritidshus och garage till gjutning av plintgrunder, stödmurar, trappor och maskinhallsplattor. Vi tar hand om hela kedjan: markförberedelse, schakt och bärlager, professionell formsättning, cellplastisolering, golvvärmeläggning, armering och själva gjutningen med maskinell glättning för ett spikrakt och slitstarkt resultat.`,
+    heroImage: '/service-betong.webp',
+    image: '/service-betong.webp',
+    href: '/tjanster#gjutning',
+    tag: 'Gjutningar',
+    badge: 'Hög bärighet',
+    highlights: [
+      'Gjutning av betongplatta på mark för villa, garage och fritidshus',
+      'Noggrann formsättning, armering och cellplastisolering',
+      'Laserprecision och professionell glättning för perfekt jämn yta',
+      'Stödmurar, trappor, maskinhallsplattor och plintgrunder',
+    ],
+    sections: [
+      {
+        heading: 'Starka och tåliga betongplattor med millimeterprecision',
+        text: 'En gjuten betongplatta måste dimensioneras och utföras med största noggrannhet för att klara markens laster och nordiska klimatförhållanden med frost och tjäle. Vi använder modern mätutrustning och kvalitetsbetong för att säkerställa maximal livslängd och stabilitet.',
+        bullets: [
+          'Platta på mark: Komplett gjuten betongplatta med isolering, fuktspärr och armeringsnät',
+          'Garage & Verkstad: Förstärkta betonggolv anpassade för tunga fordon och maskiner',
+          'Formsättning & Armering: Skräddarsydd formning för trappor, fundament, socklar och stödmurar',
+          'Vattenburen golvvärme: Montering och provtryckning av golvvärmeslingor före gjutning',
+        ],
+      },
+      {
+        heading: 'Lokal betongexpertis med modern utrustning',
+        text: 'Vi arbetar med beprövade metoder och moderna maskiner för formsättning, vibrering och glättning. Oavsett om det gäller ett mindre attefallshus eller en stor maskinhall levererar vi ett hantverk du kan lita på.',
+      },
+    ],
+    faq: [
+      {
+        question: 'Hur lång tid tar det innan man kan bygga vidare på en gjuten betongplatta?',
+        answer: 'Plattan går normalt att beträda redan efter 1–2 dygn. Stomresning och träarbeten kan vanligtvis påbörjas efter cirka 1–2 veckor beroende på årstid och temperatur, medan betongens fulla härdning fortsätter under byggtiden.',
+      },
+      {
+        question: 'Utför ni gjutningar för både privatpersoner och företag?',
+        answer: 'Ja, vi gjuter för villor, fritidshus och garage åt privatpersoner samt maskinhallar, verkstäder och kommersiella lokaler åt företag.',
+      },
+    ],
+  },
+  {
+    slug: 'garage',
+    title: 'Garage',
+    shortDescription: 'Nybyggnation av isolerade och oisolerade garage, carportar och förråd – från stabil gjuten platta till färdig byggnad.',
+    heroText: 'Kundanpassade garage och carportar i Alfta, Edsbyn, Bollnäs och Hälsingland. Från grund till färdigt tak.',
+    detailedDescription: `Ett välbyggt garage skyddar dina fordon, skapar suveräna förvaringsytor och höjer värdet på din fastighet.
+
+Hos WSH Bygg bygger vi allt från praktiska carportar och enkla kallgarage till fullt isolerade dubbelgarage med verkstadsdel, motordrivna garageportar och förråd. Vi hanterar hela bygget: från markförberedelse och gjutning av armerad betongplatta till stomresning, takläggning, fasadpanel och fönster- och portmontering.`,
+    heroImage: '/service-garage.webp',
+    image: '/service-garage.webp',
+    href: '/tjanster#garage',
+    tag: 'Garage',
+    badge: 'Kundanpassat',
+    highlights: [
+      'Gjuten och isolerad garageplatta dimensionerad för fordon',
+      'Stomresning, fasadbeklädnad och takläggning',
+      'Isolerade varmgarage eller funktionella kallgarage och carportar',
+      'Montering av garageportar, dörrar och fönster',
+    ],
+    sections: [
+      {
+        heading: 'Från grund till nyckelfärdigt garage',
+        text: 'Vi anpassar garagets utformning, taklutning och fasadpanel så att det matchar ditt befintliga bostadshus perfekt.',
+        bullets: [
+          'Platta på mark: Förstärkt betongplatta med fuktspärr och eventuell golvbrunn/ränna',
+          'Stomme & Tak: Tålig träkonstruktion med god takbärighet för snölaster',
+          'Port & Tillgänglighet: Professionell montering av moderna takskjutsportar',
+          'El & Förvaring: Förberedelse för laddbox, belysning och verkstadsinredning',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'Krävs det bygglov för att bygga garage?',
+        answer: 'Ett fristående garage upp till 30 kvm kan ofta byggas som Attefallsbyggnad med endast startbesked/anmälan, medan större garage kräver sedvanligt bygglov. Vi hjälper gärna till med underlag inför din anmälan.',
+      },
+      {
+        question: 'Bygger ni både isolerade och oisolerade garage?',
+        answer: 'Ja, vi bygger allt från oisolerade kallgarage och carportar till fullt vinterisolerade varmgarage med golvvärme och verkstadsdel.',
       },
     ],
   },

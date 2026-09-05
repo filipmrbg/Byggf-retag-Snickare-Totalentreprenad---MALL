@@ -38,8 +38,8 @@ const references: ReferenceItem[] = [
   },
   {
     id: '6',
-    image: '/service-smahusbyggnation.webp',
-    alt: 'WSH Bygg nybyggnation och trähus',
+    image: '/gallery-wsh-interior.webp',
+    alt: 'WSH Bygg invändigt hantverk, träpanel och golvläggning',
   },
 ];
 
@@ -170,6 +170,7 @@ export default function ProjectsGallery() {
                   src={item.image}
                   alt={item.alt}
                   loading="lazy"
+                  decoding="async"
                   className="collage-card-img"
                 />
               </div>
@@ -234,6 +235,7 @@ export default function ProjectsGallery() {
             <img
               src={references[lightboxIndex].image}
               alt={references[lightboxIndex].alt}
+              decoding="async"
               className="ref-modal-img"
             />
             <div className="ref-modal-counter">

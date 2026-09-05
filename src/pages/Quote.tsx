@@ -189,12 +189,12 @@ export default function Quote() {
                     onBlur={blurInput}
                   >
                     <option value="">Välj tjänst...</option>
-                    <option value="grund-gjutning">Grund & Gjutning</option>
-                    <option value="takbyte">Takbyte</option>
-                    <option value="om-tillbyggnad">Om- & Tillbyggnad</option>
-                    <option value="renovering">Renovering & Finsnickeri</option>
                     <option value="nybyggnation">Nybyggnation</option>
-                    <option value="totalentreprenad">Totalentreprenad</option>
+                    <option value="renovering">Renovering</option>
+                    <option value="tillbyggnad">Tillbyggnad</option>
+                    <option value="takbyte">Takbyte</option>
+                    <option value="gjutningar">Gjutningar</option>
+                    <option value="garage">Garage</option>
                     <option value="annat">Annat projekt</option>
                   </select>
 

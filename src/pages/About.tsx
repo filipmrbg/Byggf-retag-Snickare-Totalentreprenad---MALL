@@ -10,33 +10,13 @@ const container: React.CSSProperties = {
   padding: '0 clamp(20px, 5vw, 40px)',
 };
 
-const accentLine: React.CSSProperties = {
-  display: 'block',
-  width: '60px',
-  height: '3px',
-  background: 'var(--color-primary)',
-  borderRadius: '2px',
-  margin: '14px auto 0',
-};
 
 const teamMembers = [
   {
-    role: 'Ägare & Grundare / VD',
-    name: 'William Ehn',
-    initials: 'W',
-    description: 'Driver WSH Bygg med passion för gediget hantverk, personlig kontakt och trygga helhetslösningar.',
-  },
-  {
-    role: 'Yrkeshantverkare & Snickare',
-    name: 'Marcus Lindqvist',
-    initials: 'M',
-    description: 'Mångårig erfarenhet inom stomresning, takbyten, finsnickeri och interiöra renoveringar.',
-  },
-  {
-    role: 'Yrkeshantverkare & Grund / Betong',
-    name: 'Anton Berg',
-    initials: 'A',
-    description: 'Specialist på grundläggning, formsättning, armering, gjutning och anläggningsarbeten.',
+    role: 'Snickare',
+    name: 'Robin Ehn',
+    initials: 'R',
+    description: 'Driver WSH Bygg med fokus på genuint hantverk, personlig kontakt och ordentligt utförda jobb från start till mål.',
   },
 ];
 
@@ -51,7 +31,7 @@ export default function About() {
       {/* ── SECTION A: HERO HEADER ────────────────────────────── */}
       <section style={{
         position: 'relative',
-        backgroundImage: 'url(/hero-main.webp)',
+        backgroundImage: 'url(/hero-about.webp)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         paddingTop: '140px',
@@ -102,6 +82,8 @@ export default function About() {
                 <img
                   src={images.about.hero.url}
                   alt={images.about.hero.alt}
+                  loading="lazy"
+                  decoding="async"
                   style={{
                     width: '100%',
                     maxWidth: '190px',
@@ -159,7 +141,7 @@ export default function About() {
                     lineHeight: 1.8,
                     margin: '0 0 24px 0',
                   }}>
-                    När du anlitar oss får du en trygg samarbetspartner som tar fullt ansvar för kvalitet, tidsplan och noggrannhet. Inget jobb är för litet och inget för stort för vårt team.
+                    När du anlitar oss får du en trygg samarbetspartner som tar fullt ansvar för kvalitet, tidsplan och noggrannhet. Inget jobb är för litet och vi lägger samma omsorg och noggrannhet på varje projekt.
                   </p>
 
                   {/* Founder Quote Card */}
@@ -178,7 +160,7 @@ export default function About() {
                       lineHeight: 1.7,
                       margin: '0 0 10px 0',
                     }}>
-                      "Att bygga och renovera handlar om förtroende. Vi sätter en stolthet i att alltid leverera hållbara resultat och hålla vad vi lovar till våra kunder."
+                      "Att bygga och renovera handlar om förtroende. Jag sätter en stolthet i att alltid leverera ett ordentligt hantverk och hålla vad jag lovar."
                     </p>
                     <span style={{
                       color: 'var(--color-primary)',
@@ -186,7 +168,7 @@ export default function About() {
                       fontSize: '0.9rem',
                       display: 'block',
                     }}>
-                      William Ehn, Ägare och Grundare av WSH Bygg
+                      Robin Ehn, WSH Bygg
                     </span>
                   </div>
 
@@ -201,7 +183,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* ── SECTION D: TEAM PROFILES (3 PERSONS) ──────────────────────────── */}
+      {/* ── SECTION D: OWNER PROFILE ──────────────────────────── */}
       <section style={{ background: '#ffffff', padding: '90px 0', borderTop: '1px solid #e2e8f0' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 clamp(20px, 5vw, 40px)' }}>
           <div style={{ textAlign: 'center', marginBottom: '50px' }}>
@@ -213,7 +195,7 @@ export default function About() {
                 letterSpacing: '-0.03em',
                 margin: '0 0 12px 0',
               }}>
-                Möt vårt team
+                Bakom WSH Bygg
               </h2>
             </ScrollReveal>
             <ScrollReveal animation="fade-up" delay={100}>
@@ -224,16 +206,15 @@ export default function About() {
                 maxWidth: '580px',
                 margin: '0 auto',
               }}>
-                Erfarna och engagerade yrkeshantverkare som levererar kvalitet med bas i Alfta och uppdrag i hela Hälsingland.
+                WSH Bygg drivs av Robin Ehn – lokal snickare i Alfta med passion för gediget hantverk, personlig service och raka besked.
               </p>
             </ScrollReveal>
           </div>
 
           <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-            gap: '28px',
-          }} className="team-grid">
+            maxWidth: '420px',
+            margin: '0 auto',
+          }}>
             {teamMembers.map((member, i) => (
               <ScrollReveal key={i} animation="slide-up-fade" delay={i * 120}>
                 <div style={{

@@ -104,28 +104,16 @@ export default function Navbar() {
 
     if (href.includes('#')) {
       const [path, hashId] = href.split('#');
-      if (location.pathname === path) {
+      const targetPath = path || '/';
+      if (location.pathname === targetPath) {
         const el = document.getElementById(hashId);
         if (el) {
-          const y = el.getBoundingClientRect().top + window.pageYOffset - 100;
+          const y = el.getBoundingClientRect().top + window.pageYOffset - 90;
           window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
           window.history.pushState(null, '', `#${hashId}`);
         }
       } else {
-        navigate(href);
-      }
-    } else if (href.startsWith('/#')) {
-      const id = href.slice(2);
-      if (location.pathname === '/') {
-        setTimeout(() => {
-          const el = document.getElementById(id);
-          if (el) {
-            const y = el.getBoundingClientRect().top + window.pageYOffset - 90;
-            window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
-          }
-        }, 100);
-      } else {
-        navigate('/', { state: { scrollTo: id } });
+        navigate(href, { state: { scrollTo: hashId } });
       }
     } else {
       navigate(href);
@@ -144,8 +132,8 @@ export default function Navbar() {
           right: 0,
           zIndex: 1000,
           padding: scrolled
-            ? '12px clamp(20px, 4vw, 40px)'
-            : '24px clamp(20px, 4vw, 40px)',
+            ? '6px clamp(20px, 4vw, 40px)'
+            : '10px clamp(20px, 4vw, 40px)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
@@ -175,6 +163,8 @@ export default function Navbar() {
             src={images.logo.url}
             alt={images.logo.alt}
             className={`nav-logo ${scrolled ? 'scrolled' : ''}`}
+            decoding="async"
+            fetchPriority="high"
           />
         </Link>
 
@@ -558,8 +548,8 @@ export default function Navbar() {
           height: 15px;
         }
         .nav-logo {
-          height: 88px;
-          max-height: 14vh;
+          height: 148px;
+          max-height: 22vh;
           width: auto;
           display: block;
           object-fit: contain;
@@ -567,11 +557,11 @@ export default function Navbar() {
           padding: 0;
           border-radius: 0;
           box-shadow: none;
-          filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.45));
+          filter: drop-shadow(0 2px 14px rgba(0, 0, 0, 0.5));
           transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .nav-logo.scrolled {
-          height: 68px;
+          height: 105px;
           background-color: transparent;
           padding: 0;
           border-radius: 0;
@@ -584,15 +574,15 @@ export default function Navbar() {
           .nav-pill { display: none !important; }
           .hamburger { display: flex !important; }
           .offert-btn { display: none !important; }
-          nav.navbar-el { padding: 14px 20px !important; }
-          nav.navbar-el.scrolled { padding: 10px 20px !important; }
+          nav.navbar-el { padding: 10px 16px !important; }
+          nav.navbar-el.scrolled { padding: 6px 16px !important; }
           .mobile-phone-btn { display: flex !important; align-items: center; }
           .nav-logo {
-            height: 62px;
+            height: 98px;
             padding: 0;
           }
           .nav-logo.scrolled {
-            height: 50px;
+            height: 76px;
             padding: 0;
           }
         }

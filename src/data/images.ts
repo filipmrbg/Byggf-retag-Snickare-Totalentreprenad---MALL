@@ -34,6 +34,8 @@ export interface SiteImages {
     smahusbyggnation?: ImageSlot;
     renovering?: ImageSlot;
     ombyggnation?: ImageSlot;
+    tillbyggnad?: ImageSlot;
+    garage?: ImageSlot;
     totalentreprenad?: ImageSlot;
     [key: string]: ImageSlot | undefined;
   };
@@ -106,9 +108,13 @@ const images: SiteImages = {
       url: '/service-ombyggnation.webp',
       alt: 'Ombyggnation, takbyte och tillbyggnad i Ovanåker',
     },
-    totalentreprenad: {
-      url: '/service-totalentreprenad.webp',
-      alt: 'Totalentreprenad och samordnade byggprojekt',
+    garage: {
+      url: '/service-garage.webp',
+      alt: 'Garagebyggnation av WSH Bygg',
+    },
+    gjutning: {
+      url: '/service-betong.webp',
+      alt: 'Gjutning av betongplatta och formsättning',
     },
   },
 

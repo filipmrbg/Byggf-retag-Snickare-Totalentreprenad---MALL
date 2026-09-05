@@ -11,7 +11,7 @@ export default function CallModal({ isOpen, onClose }: CallModalProps) {
   const contacts = [
     {
       name: 'WSH Bygg',
-      role: 'William Ehn',
+      role: 'Robin Ehn',
       phone: '070-652 99 36',
       tel: 'tel:0706529936',
     },

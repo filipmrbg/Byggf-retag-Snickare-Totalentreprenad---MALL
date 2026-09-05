@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Instagram, Facebook, ArrowUpRight, Camera } from 'lucide-react';
+import { Instagram, Facebook, ArrowUpRight } from 'lucide-react';
 import ScrollReveal from './ScrollReveal';
 
 const instagramPosts = [
@@ -17,15 +17,24 @@ const instagramPosts = [
   },
 ];
 
+interface CustomWindow {
+  instgrm?: {
+    Embeds?: {
+      process: () => void;
+    };
+  };
+}
+
 export default function SocialBanner() {
   useEffect(() => {
+    const win = window as unknown as CustomWindow;
     const processEmbeds = () => {
-      if ((window as any).instgrm?.Embeds) {
-        (window as any).instgrm.Embeds.process();
+      if (win.instgrm?.Embeds) {
+        win.instgrm.Embeds.process();
       }
     };
 
-    if ((window as any).instgrm?.Embeds) {
+    if (win.instgrm?.Embeds) {
       processEmbeds();
     }
 
