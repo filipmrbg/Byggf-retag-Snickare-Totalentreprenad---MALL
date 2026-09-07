@@ -722,7 +722,7 @@ export default function Home() {
                       <Star key={i} size={15} fill="#FBBC05" color="#FBBC05" />
                     ))}
                   </div>
-                  <span style={{ color: 'var(--color-gray-600)', fontSize: '0.85rem' }}>(48 omdömen på Google)</span>
+                  <span style={{ color: 'var(--color-gray-600)', fontSize: '0.85rem' }}>på Google</span>
                 </div>
               </ScrollReveal>
             </div>
