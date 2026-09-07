@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
-import { ShieldCheck, Clock, Award, Send } from 'lucide-react';
+import React from 'react';
+import { ShieldCheck, Clock, Award } from 'lucide-react';
 import ScrollReveal from '../components/ScrollReveal';
 import FAQAccordion from '../components/FAQAccordion';
 import CTABanner from '../components/CTABanner';
+import QuoteForm from '../components/QuoteForm';
 import { usePageTitle } from '../hooks/usePageTitle';
 
 const container: React.CSSProperties = {
@@ -26,41 +27,11 @@ const faqItems = [
   },
 ];
 
-const inputStyle: React.CSSProperties = {
-  width: '100%',
-  padding: '14px 16px',
-  border: '1px solid #e5e7eb',
-  borderRadius: '12px',
-  background: '#fafafa',
-  fontSize: '0.95rem',
-  fontFamily: 'var(--font-family)',
-  color: 'var(--color-text-dark)',
-  outline: 'none',
-  boxSizing: 'border-box',
-  marginBottom: '16px',
-  transition: 'border-color 0.2s ease, box-shadow 0.2s ease',
-  display: 'block',
-};
-
-function focusInput(e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {
-  e.currentTarget.style.borderColor = 'var(--color-primary)';
-  e.currentTarget.style.boxShadow = '0 0 0 3px rgba(234, 88, 12, 0.15)';
-}
-function blurInput(e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {
-  e.currentTarget.style.borderColor = '#e5e7eb';
-  e.currentTarget.style.boxShadow = 'none';
-}
-
 export default function Quote() {
   usePageTitle(
     'Begär offert | WSH Bygg',
     'Beskriv ditt projekt och begär en kostnadsfri offert för bygg-, gjutnings- eller renoveringsarbeten med Alfta och Hälsingland som bas.'
   );
-  const [name, setName]       = useState('');
-  const [email, setEmail]     = useState('');
-  const [phone, setPhone]     = useState('');
-  const [service, setService] = useState('');
-  const [message, setMessage] = useState('');
 
   return (
     <main style={{ fontFamily: 'var(--font-family)' }}>
@@ -119,122 +90,7 @@ export default function Quote() {
 
             {/* Form */}
             <ScrollReveal animation="fade-right">
-              <div style={{
-                background: '#ffffff',
-                border: '1px solid #e5e7eb',
-                borderRadius: '16px',
-                padding: 'clamp(24px, 4vw, 40px)',
-                boxShadow: '0 4px 20px rgba(0,0,0,0.06)',
-              }}>
-                <h2 style={{
-                  color: 'var(--color-text-dark)',
-                  fontWeight: 700,
-                  fontSize: '1.4rem',
-                  margin: '0 0 24px 0',
-                }}>
-                  Fyll i dina uppgifter
-                </h2>
-
-                <form onSubmit={(e) => e.preventDefault()}>
-                  <label style={{ display: 'block', marginBottom: '4px', fontSize: '0.85rem', fontWeight: 600, color: 'var(--color-text-dark)' }}>
-                    Namn *
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="Ditt för- och efternamn"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    style={inputStyle}
-                    onFocus={focusInput}
-                    onBlur={blurInput}
-                    required
-                  />
-
-                  <label style={{ display: 'block', marginBottom: '4px', fontSize: '0.85rem', fontWeight: 600, color: 'var(--color-text-dark)' }}>
-                    E-postadress *
-                  </label>
-                  <input
-                    type="email"
-                    placeholder="din.epost@doman.se"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    style={inputStyle}
-                    onFocus={focusInput}
-                    onBlur={blurInput}
-                    required
-                  />
-
-                  <label style={{ display: 'block', marginBottom: '4px', fontSize: '0.85rem', fontWeight: 600, color: 'var(--color-text-dark)' }}>
-                    Telefonnummer *
-                  </label>
-                  <input
-                    type="tel"
-                    placeholder="07X-XXX XX XX"
-                    value={phone}
-                    onChange={(e) => setPhone(e.target.value)}
-                    style={inputStyle}
-                    onFocus={focusInput}
-                    onBlur={blurInput}
-                    required
-                  />
-
-                  <label style={{ display: 'block', marginBottom: '4px', fontSize: '0.85rem', fontWeight: 600, color: 'var(--color-text-dark)' }}>
-                    Typ av tjänst
-                  </label>
-                  <select
-                    value={service}
-                    onChange={(e) => setService(e.target.value)}
-                    style={{ ...inputStyle, cursor: 'pointer' }}
-                    onFocus={focusInput}
-                    onBlur={blurInput}
-                  >
-                    <option value="">Välj tjänst...</option>
-                    <option value="nybyggnation">Nybyggnation</option>
-                    <option value="renovering">Renovering</option>
-                    <option value="tillbyggnad">Tillbyggnad</option>
-                    <option value="takbyte">Takbyte</option>
-                    <option value="gjutningar">Gjutningar</option>
-                    <option value="garage">Garage</option>
-                    <option value="annat">Annat projekt</option>
-                  </select>
-
-                  <label style={{ display: 'block', marginBottom: '4px', fontSize: '0.85rem', fontWeight: 600, color: 'var(--color-text-dark)' }}>
-                    Projektbeskrivning *
-                  </label>
-                  <textarea
-                    rows={5}
-                    placeholder="Beskriv ditt projekt så detaljerat du kan (t.ex. yta i kvm, adress, önskad starttid)..."
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                    style={{ ...inputStyle, resize: 'vertical', marginBottom: '24px' }}
-                    onFocus={focusInput}
-                    onBlur={blurInput}
-                    required
-                  />
-
-                  <button
-                    type="submit"
-                    style={{
-                      width: '100%',
-                      padding: '16px',
-                      background: 'var(--color-primary)',
-                      color: '#ffffff',
-                      border: 'none',
-                      borderRadius: '12px',
-                      fontWeight: 700,
-                      fontSize: '1rem',
-                      cursor: 'pointer',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      gap: '8px',
-                      transition: 'transform 0.2s ease, opacity 0.2s ease',
-                    }}
-                  >
-                    <Send size={18} /> SKICKA OFFERTFÖRFRÅGAN
-                  </button>
-                </form>
-              </div>
+              <QuoteForm title="Fyll i dina uppgifter" />
             </ScrollReveal>
 
             {/* Sidebar Trust Items */}
