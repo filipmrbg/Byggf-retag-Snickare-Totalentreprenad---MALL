@@ -198,9 +198,9 @@ Deno.serve(async (req: Request) => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          from: "WSH Bygg <noreply@wshbygg.se>",
-          to: ["wshbygg@gmail.com"],
-          subject: `Ny kontaktförfrågan från ${name.trim()}`,
+          from: "Kontaktformulär <info@contact.bgbygger.se>",
+          to: ["f.bjorgaas@gmail.com"],
+          subject: `Ny kontaktförfrågan från ${name.trim()}${service?.trim() ? ` – ${service.trim()}` : ''}`,
           reply_to: email.trim(),
           html,
         }),
