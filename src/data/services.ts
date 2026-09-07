@@ -36,6 +36,8 @@ export const services: ServiceItem[] = [
   {
     slug: 'nybyggnation',
     title: 'Nybyggnation',
+    seoTitle: 'Nybyggnation i Alfta, Edsbyn, Bollnäs & Hälsingland | WSH Bygg',
+    seoDescription: 'Professionell nybyggnation av villor, fritidshus och attefallshus i Alfta, Edsbyn, Bollnäs och Hälsingland. Från grund till nyckelfärdigt hem. Begär fri offert!',
     shortDescription: 'Vi bygger kundanpassade villor, fritidshus och attefallshus från grundläggning till inflyttningsklart hem med gedigen precision.',
     heroText: 'Förverkliga ditt drömboende i Hälsingland. Trygg och professionell nybyggnation från grund till färdigt tak.',
     detailedDescription: `Att bygga nytt är ett av livets största och roligaste projekt. Hos WSH Bygg hjälper vi dig hela vägen från idé till nyckelfärdigt resultat – oavsett om du planerar en modern villa, ett klassiskt hälsingehus eller ett funktionellt fritidshus.
@@ -43,7 +45,7 @@ export const services: ServiceItem[] = [
 Vi tar hand om hela byggkedjan: från markförberedelser, gjutning av stabil betongplatta och stomresning till takläggning, fasad och inredningssnickeri. Med vår breda yrkeserfarenhet och lokala förankring i Alfta, Edsbyn och Bollnäs kan du känna dig helt trygg genom hela bygget.`,
     heroImage: '/service-smahusbyggnation.webp',
     image: '/service-smahusbyggnation.webp',
-    href: '/tjanster#nybyggnation',
+    href: '/tjanster/nybyggnation',
     tag: 'Nybyggnation',
     badge: 'Kundanpassat',
     highlights: [
@@ -82,6 +84,8 @@ Vi tar hand om hela byggkedjan: från markförberedelser, gjutning av stabil bet
   {
     slug: 'renovering',
     title: 'Renovering',
+    seoTitle: 'Renovering i Alfta, Edsbyn, Bollnäs & Hälsingland | WSH Bygg',
+    seoDescription: 'Professionell renovering av hus, kök, badrum och fasader i Alfta, Edsbyn, Bollnäs och Hälsingland. ROT-avdrag 30%. Begär kostnadsfri offert!',
     shortDescription: 'Varsamma och gedigna renoveringar av hus, kök, badrum, fasader och golvbjälklag som höjer både standard och trivsel.',
     heroText: 'Ge ditt hus nytt liv med professionell renovering i Alfta, Edsbyn, Bollnäs och Hälsingland.',
     detailedDescription: `Oavsett om det gäller att renovera ett äldre trähus, byta ut golvbjälklag, fräscha upp ytskikten eller genomföra en helrenovering av villan levererar vi hantverk med precision.
@@ -89,7 +93,7 @@ Vi tar hand om hela byggkedjan: från markförberedelser, gjutning av stabil bet
 Vi kombinerar moderna byggtekniker med respekt för husets ursprungliga själ och karaktär, och ser till att renoveringen blir både funktionell, snygg och långsiktigt hållbar. Självklart hjälper vi dig att nyttja ROT-avdraget med 30 % direkt på fakturan.`,
     heroImage: '/service-renovering.webp',
     image: '/service-renovering.webp',
-    href: '/tjanster#renovering',
+    href: '/tjanster/renovering',
     tag: 'Renovering',
     badge: 'ROT avdrag',
     highlights: [
@@ -124,6 +128,8 @@ Vi kombinerar moderna byggtekniker med respekt för husets ursprungliga själ oc
   {
     slug: 'tillbyggnad',
     title: 'Tillbyggnad',
+    seoTitle: 'Tillbyggnad i Alfta, Edsbyn, Bollnäs & Hälsingland | WSH Bygg',
+    seoDescription: 'Kundanpassade tillbyggnader och utbyggnader i Alfta, Edsbyn, Bollnäs och Hälsingland. Mer boyta utan att flytta. Begär kostnadsfri offert!',
     shortDescription: 'Behöver du mer boyta eller nya rum? Vi utför kundanpassade tillbyggnader och utbyggnader med perfekt passform för ditt hus.',
     heroText: 'Väx i ditt nuvarande hem. Vi utför gedigna tillbyggnader med högsta kvalitet i Hälsingland.',
     detailedDescription: `När familjen växer eller behoven ändras är en tillbyggnad det smartaste sättet att få mer yta utan att behöva flytta.
@@ -131,7 +137,7 @@ Vi kombinerar moderna byggtekniker med respekt för husets ursprungliga själ oc
 WSH Bygg hanterar allt från att bygga ut villan med nya sovrum eller rymligt vardagsrum till att bygga isolerade uterum och förstärka bärande konstruktioner. Vi ser till att den nya delen smälter in harmoniskt med husets befintliga arkitektur och uppfyller alla krav på isolering och hållbarhet.`,
     heroImage: '/service-ombyggnation.webp',
     image: '/service-ombyggnation.webp',
-    href: '/tjanster#tillbyggnad',
+    href: '/tjanster/tillbyggnad',
     tag: 'Tillbyggnad',
     badge: 'Flexibla lösningar',
     highlights: [
@@ -162,6 +168,8 @@ WSH Bygg hanterar allt från att bygga ut villan med nya sovrum eller rymligt va
   {
     slug: 'takbyte',
     title: 'Takbyte',
+    seoTitle: 'Takbyte i Alfta, Edsbyn, Bollnäs & Hälsingland | WSH Bygg',
+    seoDescription: 'Komplett takbyte med tegel, betongpannor eller plåt i Alfta, Edsbyn, Bollnäs och Hälsingland. ROT-avdrag 30%. Begär kostnadsfri offert!',
     shortDescription: 'Kompletta takbyten med tegel, betongpannor eller plåt som ger ditt hus ett säkert, tätt och hållbart klimatskal året om.',
     heroText: 'Säkra och slitstarka tak i Alfta, Edsbyn, Bollnäs och Hälsingland. Komplett takläggning med garanti.',
     detailedDescription: `Ett välmående tak är husets viktigaste skydd mot väder och vind. Vi på WSH Bygg utför kompletta takbyten för villor, fritidshus och fastigheter i hela Hälsingland.
@@ -169,7 +177,7 @@ WSH Bygg hanterar allt från att bygga ut villan med nya sovrum eller rymligt va
 Vi byter råspont, underlagspapp, läkt och lägger nya betongpannor, tegelpannor eller plåt. Vi ser även över taksäkerhet, vindskivor, hängrännor och tilläggsisolering för ett energieffektivt och tryggt hem.`,
     heroImage: '/portfolio-roofing.webp',
     image: '/portfolio-roofing.webp',
-    href: '/tjanster#takbyte',
+    href: '/tjanster/takbyte',
     tag: 'Takbyte',
     badge: 'Tätt & Tryggt',
     highlights: [
@@ -204,6 +212,8 @@ Vi byter råspont, underlagspapp, läkt och lägger nya betongpannor, tegelpanno
   {
     slug: 'gjutning',
     title: 'Gjutningar',
+    seoTitle: 'Gjutning & Betongarbeten i Alfta, Edsbyn, Bollnäs & Hälsingland | WSH Bygg',
+    seoDescription: 'Professionella betonggjutningar för husgrunder, garageplattor och stödmurar i Alfta, Edsbyn, Bollnäs och Hälsingland. Begär kostnadsfri offert!',
     shortDescription: 'Professionella betonggjutningar för husgrunder, garageplattor, stödmurar och maskinhallar med laserprecision och högsta hållfasthet.',
     heroText: 'Stabila husgrunder och tåliga betonggjutningar i Alfta, Edsbyn, Bollnäs och hela Hälsingland.',
     detailedDescription: `En gedigen och välutförd gjutning är grunden för varje lyckat byggprojekt. Hos WSH Bygg har vi stor erfarenhet och specialistkunskap inom alla typer av betonggjutningar och grundläggningsarbeten.
@@ -211,7 +221,7 @@ Vi byter råspont, underlagspapp, läkt och lägger nya betongpannor, tegelpanno
 Vi utför allt från gjutning av isolerade betongplattor på mark för villor, fritidshus och garage till gjutning av plintgrunder, stödmurar, trappor och maskinhallsplattor. Vi tar hand om hela kedjan: markförberedelse, schakt och bärlager, professionell formsättning, cellplastisolering, golvvärmeläggning, armering och själva gjutningen med maskinell glättning för ett spikrakt och slitstarkt resultat.`,
     heroImage: '/service-betong.webp',
     image: '/service-betong.webp',
-    href: '/tjanster#gjutning',
+    href: '/tjanster/gjutning',
     tag: 'Gjutningar',
     badge: 'Hög bärighet',
     highlights: [
@@ -250,6 +260,8 @@ Vi utför allt från gjutning av isolerade betongplattor på mark för villor, f
   {
     slug: 'garage',
     title: 'Garage',
+    seoTitle: 'Garagebygge i Alfta, Edsbyn, Bollnäs & Hälsingland | WSH Bygg',
+    seoDescription: 'Nybyggnation av garage, carportar och förråd i Alfta, Edsbyn, Bollnäs och Hälsingland. Från gjuten platta till färdigt garage. Begär offert!',
     shortDescription: 'Nybyggnation av isolerade och oisolerade garage, carportar och förråd – från stabil gjuten platta till färdig byggnad.',
     heroText: 'Kundanpassade garage och carportar i Alfta, Edsbyn, Bollnäs och Hälsingland. Från grund till färdigt tak.',
     detailedDescription: `Ett välbyggt garage skyddar dina fordon, skapar suveräna förvaringsytor och höjer värdet på din fastighet.
@@ -257,7 +269,7 @@ Vi utför allt från gjutning av isolerade betongplattor på mark för villor, f
 Hos WSH Bygg bygger vi allt från praktiska carportar och enkla kallgarage till fullt isolerade dubbelgarage med verkstadsdel, motordrivna garageportar och förråd. Vi hanterar hela bygget: från markförberedelse och gjutning av armerad betongplatta till stomresning, takläggning, fasadpanel och fönster- och portmontering.`,
     heroImage: '/service-garage.webp',
     image: '/service-garage.webp',
-    href: '/tjanster#garage',
+    href: '/tjanster/garage',
     tag: 'Garage',
     badge: 'Kundanpassat',
     highlights: [

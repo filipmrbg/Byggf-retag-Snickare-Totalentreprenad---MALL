@@ -217,33 +217,35 @@ export default function ServicesOverview() {
                       </p>
 
                       {/* Action Button */}
-                      <Link
-                        to="/offert"
-                        style={{
-                          display: 'inline-flex',
-                          alignItems: 'center',
-                          gap: '10px',
-                          background: 'var(--color-primary)',
-                          color: '#ffffff',
-                          fontWeight: 700,
-                          fontSize: '0.95rem',
-                          padding: '14px 28px',
-                          borderRadius: 'var(--border-radius-pill)',
-                          textDecoration: 'none',
-                          boxShadow: '0 4px 14px rgba(234, 88, 12, 0.35)',
-                          transition: 'all 0.25s ease',
-                        }}
-                        onMouseEnter={(e) => {
-                          e.currentTarget.style.background = 'var(--color-primary-hover)';
-                          e.currentTarget.style.transform = 'translateY(-2px)';
-                        }}
-                        onMouseLeave={(e) => {
-                          e.currentTarget.style.background = 'var(--color-primary)';
-                          e.currentTarget.style.transform = 'translateY(0)';
-                        }}
-                      >
-                        Begär offert för {svc.title} <ArrowRight size={16} />
-                      </Link>
+                      <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+                        <Link
+                          to={`/tjanster/${svc.slug}`}
+                          style={{
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            gap: '10px',
+                            background: 'var(--color-primary)',
+                            color: '#ffffff',
+                            fontWeight: 700,
+                            fontSize: '0.95rem',
+                            padding: '14px 28px',
+                            borderRadius: 'var(--border-radius-pill)',
+                            textDecoration: 'none',
+                            boxShadow: '0 4px 14px rgba(234, 88, 12, 0.35)',
+                            transition: 'all 0.25s ease',
+                          }}
+                          onMouseEnter={(e) => {
+                            e.currentTarget.style.background = 'var(--color-primary-hover)';
+                            e.currentTarget.style.transform = 'translateY(-2px)';
+                          }}
+                          onMouseLeave={(e) => {
+                            e.currentTarget.style.background = 'var(--color-primary)';
+                            e.currentTarget.style.transform = 'translateY(0)';
+                          }}
+                        >
+                          Läs mer om {svc.title} <ArrowRight size={16} />
+                        </Link>
+                      </div>
                     </ScrollReveal>
                   </div>
 

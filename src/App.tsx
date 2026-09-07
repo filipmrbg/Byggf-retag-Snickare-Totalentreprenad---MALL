@@ -9,6 +9,7 @@ const Contact = lazy(() => import('./pages/Contact'));
 const Quote = lazy(() => import('./pages/Quote'));
 const ServicesOverview = lazy(() => import('./pages/ServicesOverview'));
 const Animations = lazy(() => import('./pages/Animations'));
+const ServiceDetail = lazy(() => import('./pages/ServiceDetail'));
 
 function ScrollToTop() {
   const { pathname, hash, state } = useLocation();
@@ -67,6 +68,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<PageWrapper><Home /></PageWrapper>} />
           <Route path="/tjanster" element={<PageWrapper><ServicesOverview /></PageWrapper>} />
+          <Route path="/tjanster/:slug" element={<PageWrapper><ServiceDetail /></PageWrapper>} />
           <Route path="/om-oss" element={<PageWrapper><About /></PageWrapper>} />
           <Route path="/kontakt" element={<PageWrapper><Contact /></PageWrapper>} />
           <Route path="/offert" element={<PageWrapper><Quote /></PageWrapper>} />

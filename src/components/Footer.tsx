@@ -3,12 +3,12 @@ import { Facebook, Instagram, Mail, Phone, MapPin } from 'lucide-react';
 import images from '../data/images';
 
 const serviceLinks = [
-  { label: 'Nybyggnation', href: '/tjanster#nybyggnation' },
-  { label: 'Renovering', href: '/tjanster#renovering' },
-  { label: 'Tillbyggnad', href: '/tjanster#tillbyggnad' },
-  { label: 'Takbyte', href: '/tjanster#takbyte' },
-  { label: 'Gjutningar', href: '/tjanster#gjutning' },
-  { label: 'Garage', href: '/tjanster#garage' },
+  { label: 'Nybyggnation', href: '/tjanster/nybyggnation' },
+  { label: 'Renovering', href: '/tjanster/renovering' },
+  { label: 'Tillbyggnad', href: '/tjanster/tillbyggnad' },
+  { label: 'Takbyte', href: '/tjanster/takbyte' },
+  { label: 'Gjutningar', href: '/tjanster/gjutning' },
+  { label: 'Garage', href: '/tjanster/garage' },
 ];
 
 const socialIcons = [
