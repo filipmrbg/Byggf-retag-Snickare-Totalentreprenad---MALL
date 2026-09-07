@@ -18,6 +18,8 @@ import FAQAccordion from '../components/FAQAccordion';
 import CallModal from '../components/CallModal';
 import { usePageTitle } from '../hooks/usePageTitle';
 import services, { ServiceItem } from '../data/services';
+import business from '../data/business';
+import BreadcrumbJsonLd from '../components/BreadcrumbJsonLd';
 
 const container: React.CSSProperties = {
   maxWidth: 'var(--container-max)',
@@ -119,8 +121,24 @@ export default function Home() {
 
 
 
+  const homeFaqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: homeFaqItems.map(f => ({
+      '@type': 'Question',
+      name: f.question,
+      acceptedAnswer: { '@type': 'Answer', text: f.answer },
+    })),
+  };
+
   return (
-    <main style={{ fontFamily: 'var(--font-family)' }}>
+    <>
+      <BreadcrumbJsonLd items={[{ name: 'Hem', path: '/' }]} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeFaqSchema) }}
+      />
+      <main style={{ fontFamily: 'var(--font-family)' }}>
 
       {/* ── SECTION 1: HERO ─────────────────────────────────────── */}
       <section style={{
@@ -244,7 +262,7 @@ export default function Home() {
                 <Button
                   variant="outline"
                   size="lg"
-                  href="tel:0706529936"
+                  href={`tel:${business.phoneTel}`}
                   onClick={(e) => {
                     if (window.innerWidth > 768) {
                       e.preventDefault();
@@ -254,7 +272,7 @@ export default function Home() {
                 >
                   <span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
                     <Phone size={18} />
-                    Ring 070-652 99 36
+                    Ring {business.phone}
                   </span>
                 </Button>
               </div>
@@ -1009,5 +1027,6 @@ export default function Home() {
         }
       `}</style>
     </main>
+    </>
   );
 }

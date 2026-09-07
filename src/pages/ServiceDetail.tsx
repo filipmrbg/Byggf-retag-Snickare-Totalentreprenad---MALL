@@ -5,6 +5,7 @@ import CTABanner from '../components/CTABanner';
 import FAQAccordion from '../components/FAQAccordion';
 import { usePageTitle } from '../hooks/usePageTitle';
 import services from '../data/services';
+import business from '../data/business';
 import { useEffect } from 'react';
 
 const container: React.CSSProperties = {
@@ -20,24 +21,28 @@ function ServiceJsonLd({ service }: { service: typeof services[0] }) {
     name: service.title,
     description: service.shortDescription,
     provider: {
+      '@id': `${business.url}/#organization`,
       '@type': 'ConstructionBusiness',
-      name: 'WSH Bygg',
-      telephone: '070-652 99 36',
-      email: 'wshbygg@gmail.com',
+      name: business.name,
+      telephone: business.phone,
+      email: business.email,
       address: {
         '@type': 'PostalAddress',
-        addressLocality: 'Alfta',
-        addressRegion: 'Hälsingland',
-        addressCountry: 'SE',
+        addressLocality: business.address.locality,
+        addressRegion: 'Gävleborgs län',
+        postalCode: '822 00',
+        addressCountry: business.address.country,
+      },
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: business.geo.latitude,
+        longitude: business.geo.longitude,
       },
     },
-    areaServed: [
-      { '@type': 'AdministrativeArea', name: 'Alfta' },
-      { '@type': 'AdministrativeArea', name: 'Ovanåkers kommun' },
-      { '@type': 'AdministrativeArea', name: 'Edsbyn' },
-      { '@type': 'AdministrativeArea', name: 'Bollnäs' },
-      { '@type': 'AdministrativeArea', name: 'Hälsingland' },
-    ],
+    areaServed: business.areasServed.map(name => ({
+      '@type': 'AdministrativeArea',
+      name,
+    })),
     url: `https://wshbygg.se/tjanster/${service.slug}`,
     image: `https://wshbygg.se${service.heroImage}`,
   };

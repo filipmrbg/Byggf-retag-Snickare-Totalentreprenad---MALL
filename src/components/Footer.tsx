@@ -1,6 +1,7 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Facebook, Instagram, Mail, Phone, MapPin } from 'lucide-react';
 import images from '../data/images';
+import business from '../data/business';
 
 const serviceLinks = [
   { label: 'Nybyggnation', href: '/tjanster/nybyggnation' },
@@ -12,8 +13,8 @@ const serviceLinks = [
 ];
 
 const socialIcons = [
-  { Icon: Instagram, label: 'Instagram', href: 'https://www.instagram.com/wsh.bygg/' },
-  { Icon: Facebook, label: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61550844801002' },
+  { Icon: Instagram, label: 'Instagram', href: business.socialLinks.instagram },
+  { Icon: Facebook, label: 'Facebook', href: business.socialLinks.facebook },
 ];
 
 export default function Footer() {
@@ -133,23 +134,23 @@ export default function Footer() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '0.95rem' }}>
 
               <a
-                href="mailto:wshbygg@gmail.com"
+                href={`mailto:${business.email}`}
                 className="footer-contact-item"
               >
                 <div className="footer-contact-icon">
                   <Mail size={16} strokeWidth={2} />
                 </div>
-                <span>wshbygg@gmail.com</span>
+                <span>{business.email}</span>
               </a>
 
               <a
-                href="tel:0706529936"
+                href={`tel:${business.phoneTel}`}
                 className="footer-contact-item"
               >
                 <div className="footer-contact-icon">
                   <Phone size={16} strokeWidth={2} />
                 </div>
-                <span>070-652 99 36</span>
+                <span>{business.phone}</span>
               </a>
 
               <div
@@ -158,7 +159,7 @@ export default function Footer() {
                 <div className="footer-contact-icon">
                   <MapPin size={16} strokeWidth={2} />
                 </div>
-                <span>Alfta • Edsbyn • Bollnäs • Hälsingland</span>
+                <span>{business.areasServed.join(' • ')}</span>
               </div>
             </div>
           </div>

@@ -4,6 +4,8 @@ import ScrollReveal from '../components/ScrollReveal';
 import FAQAccordion from '../components/FAQAccordion';
 import CTABanner from '../components/CTABanner';
 import { usePageTitle } from '../hooks/usePageTitle';
+import business from '../data/business';
+import BreadcrumbJsonLd from '../components/BreadcrumbJsonLd';
 
 const container: React.CSSProperties = {
   maxWidth: 'var(--container-max)',
@@ -66,7 +68,9 @@ export default function Contact() {
   const [message, setMessage] = useState('');
 
   return (
-    <main style={{ fontFamily: 'var(--font-family)' }}>
+    <>
+      <BreadcrumbJsonLd items={[{ name: 'Hem', path: '/' }, { name: 'Kontakt', path: '/kontakt' }]} />
+      <main style={{ fontFamily: 'var(--font-family)' }}>
 
       {/* ── SECTION A: HERO ───────────────────────────────────── */}
       <section style={{
@@ -146,12 +150,12 @@ export default function Contact() {
                     </p>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
                       <a
-                        href="tel:0706529936"
+                        href={`tel:${business.phoneTel}`}
                         style={{ color: 'var(--color-gray-600)', fontSize: '0.95rem', textDecoration: 'none', lineHeight: 1.5, transition: 'color 0.2s ease' }}
                         onMouseEnter={e => (e.currentTarget.style.color = 'var(--color-primary)')}
                         onMouseLeave={e => (e.currentTarget.style.color = 'var(--color-gray-600)')}
                       >
-                        070-652 99 36
+                        {business.phone}
                       </a>
                     </div>
                   </div>
@@ -198,12 +202,12 @@ export default function Contact() {
                       E-post
                     </p>
                     <a
-                      href="mailto:wshbygg@gmail.com"
+                      href={`mailto:${business.email}`}
                       style={{ color: 'var(--color-gray-600)', fontSize: '0.95rem', textDecoration: 'none', lineHeight: 1.5, transition: 'color 0.2s ease' }}
                       onMouseEnter={e => (e.currentTarget.style.color = 'var(--color-primary)')}
                       onMouseLeave={e => (e.currentTarget.style.color = 'var(--color-gray-600)')}
                     >
-                      wshbygg@gmail.com
+                      {business.email}
                     </a>
                   </div>
                 </div>
@@ -325,5 +329,6 @@ export default function Contact() {
         }
       `}</style>
     </main>
+    </>
   );
 }

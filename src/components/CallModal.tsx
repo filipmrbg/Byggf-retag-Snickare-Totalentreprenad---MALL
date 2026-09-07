@@ -1,4 +1,5 @@
 import { Phone, X, UserCheck } from 'lucide-react';
+import business from '../data/business';
 
 interface CallModalProps {
   isOpen: boolean;
@@ -12,8 +13,8 @@ export default function CallModal({ isOpen, onClose }: CallModalProps) {
     {
       name: 'WSH Bygg',
       role: 'Robin Ehn',
-      phone: '070-652 99 36',
-      tel: 'tel:0706529936',
+      phone: business.phone,
+      tel: `tel:${business.phoneTel}`,
     },
   ];
 

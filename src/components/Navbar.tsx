@@ -3,6 +3,7 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Phone, Menu, X, ChevronDown } from 'lucide-react';
 import images from '../data/images';
 import services from '../data/services';
+import business from '../data/business';
 
 const navLinks = [
   { label: 'Hem', href: '/' },
@@ -319,7 +320,7 @@ export default function Navbar() {
         <div style={{ display: 'flex', alignItems: 'center', gap: '16px', flexShrink: 0 }}>
           <div className="phone-link-wrapper" style={{ position: 'relative', display: 'flex', alignItems: 'center', gap: '12px' }}>
             <a
-              href="tel:0706529936"
+              href={`tel:${business.phoneTel}`}
               className="phone-link"
               style={{
                 display: 'flex',
@@ -337,7 +338,7 @@ export default function Navbar() {
               onMouseLeave={e => (e.currentTarget.style.color = 'var(--color-white)')}
             >
               <Phone size={14} color="var(--color-primary)" />
-              <span>070-652 99 36</span>
+              <span>{business.phone}</span>
             </a>
           </div>
 
@@ -378,7 +379,7 @@ export default function Navbar() {
           {/* Phone icon — shown on mobile only */}
           <div className="mobile-phone-btn" style={{ position: 'relative', display: 'none' }}>
             <a
-              href="tel:0706529936"
+              href={`tel:${business.phoneTel}`}
               aria-label="Ring oss"
               style={{
                 display: 'flex',
@@ -531,8 +532,8 @@ export default function Navbar() {
             Ring oss direkt:
           </span>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', alignItems: 'center' }}>
-            <a href="tel:0706529936" style={{ color: 'var(--color-white)', fontWeight: 600, fontSize: '0.95rem', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-              <Phone size={14} color="var(--color-primary)" /> 070-652 99 36
+            <a href={`tel:${business.phoneTel}`} style={{ color: 'var(--color-white)', fontWeight: 600, fontSize: '0.95rem', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+              <Phone size={14} color="var(--color-primary)" /> {business.phone}
             </a>
           </div>
         </div>

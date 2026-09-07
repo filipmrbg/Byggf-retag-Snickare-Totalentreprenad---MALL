@@ -3,6 +3,7 @@ import Button from '../components/Button';
 import CTABanner from '../components/CTABanner';
 import { usePageTitle } from '../hooks/usePageTitle';
 import images from '../data/images';
+import BreadcrumbJsonLd from '../components/BreadcrumbJsonLd';
 
 const container: React.CSSProperties = {
   maxWidth: 'var(--container-max)',
@@ -26,7 +27,9 @@ export default function About() {
     'Läs om WSH Bygg. Vi är ditt lokala byggföretag med bas i Alfta som utför grund & gjutning, om- & tillbyggnad, takbyte och renovering i Hälsingland.'
   );
   return (
-    <main style={{ fontFamily: 'var(--font-family)' }}>
+    <>
+      <BreadcrumbJsonLd items={[{ name: 'Hem', path: '/' }, { name: 'Om oss', path: '/om-oss' }]} />
+      <main style={{ fontFamily: 'var(--font-family)' }}>
 
       {/* ── SECTION A: HERO HEADER ────────────────────────────── */}
       <section style={{
@@ -314,5 +317,6 @@ export default function About() {
         }
       `}</style>
     </main>
+    </>
   );
 }

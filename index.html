@@ -57,63 +57,116 @@
     {
       "@context": "https://schema.org",
       "@type": "ConstructionBusiness",
+      "@id": "https://wshbygg.se/#organization",
       "name": "WSH Bygg",
       "alternateName": "WSH Bygg Alfta",
+      "legalName": "WSH Bygg",
       "description": "Lokalt byggföretag med bas i Alfta. Vi utför tjänster inom nybyggnation, renovering, tillbyggnad, takbyte och gjutningar i Ovanåkers kommun, Edsbyn, Bollnäs och hela Hälsingland.",
       "url": "https://wshbygg.se",
-      "logo": "https://scontent.fmmx3-1.fna.fbcdn.net/v/t39.30808-1/370779826_122093426690028160_7481542837525186050_n.jpg?stp=cp6_dst-jpg_tt6&cstp=mx1170x1170&ctp=s480x480&_nc_cat=101&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=JnsEzGmjhBEQ7kNvwHTTact&_nc_oc=AdpTI7rewHSbZh8PMFBC_MznLPyVEftTQhzQDxfWVp4BBzh51wY3GqqyTglyTINM8Yg&_nc_zt=24&_nc_ht=scontent.fmmx3-1.fna&_nc_gid=CIMrBSk_G5vEFMIEuFjshw&_nc_ss=7b2a8&oh=00_AQHDLpXiUsttEDTbsXc2rY7PcSHu9T9e6RlY5A0H4U-dbg&oe=6A8BACD7",
-      "image": "https://scontent.fmmx3-1.fna.fbcdn.net/v/t39.30808-1/370779826_122093426690028160_7481542837525186050_n.jpg?stp=cp6_dst-jpg_tt6&cstp=mx1170x1170&ctp=s480x480&_nc_cat=101&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=JnsEzGmjhBEQ7kNvwHTTact&_nc_oc=AdpTI7rewHSbZh8PMFBC_MznLPyVEftTQhzQDxfWVp4BBzh51wY3GqqyTglyTINM8Yg&_nc_zt=24&_nc_ht=scontent.fmmx3-1.fna&_nc_gid=CIMrBSk_G5vEFMIEuFjshw&_nc_ss=7b2a8&oh=00_AQHDLpXiUsttEDTbsXc2rY7PcSHu9T9e6RlY5A0H4U-dbg&oe=6A8BACD7",
-      "telephone": ["070-652 99 36"],
+      "logo": "https://wshbygg.se/logo.png",
+      "image": "https://wshbygg.se/logo.png",
+      "telephone": "070-652 99 36",
       "email": "wshbygg@gmail.com",
       "founder": {
         "@type": "Person",
         "name": "Robin Ehn",
         "jobTitle": "Snickare"
       },
-      "priceRange": "$$",
+      "priceRange": "$",
+      "currenciesAccepted": "SEK",
+      "paymentAccepted": "Faktura, Swish",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Alfta",
-        "addressRegion": "Hälsingland",
+        "addressRegion": "Gävleborgs län",
+        "postalCode": "822 00",
         "addressCountry": "SE"
       },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 61.3583,
+        "longitude": 16.0667
+      },
+      "hasMap": "https://maps.google.com/?q=WSH+Bygg+Alfta",
       "areaServed": [
-        {
-          "@type": "AdministrativeArea",
-          "name": "Alfta"
-        },
-        {
-          "@type": "AdministrativeArea",
-          "name": "Ovanåkers kommun"
-        },
-        {
-          "@type": "AdministrativeArea",
-          "name": "Edsbyn"
-        },
-        {
-          "@type": "AdministrativeArea",
-          "name": "Bollnäs"
-        },
-        {
-          "@type": "AdministrativeArea",
-          "name": "Hälsingland"
-        }
+        { "@type": "AdministrativeArea", "name": "Alfta" },
+        { "@type": "AdministrativeArea", "name": "Ovanåkers kommun" },
+        { "@type": "AdministrativeArea", "name": "Edsbyn" },
+        { "@type": "AdministrativeArea", "name": "Bollnäs" },
+        { "@type": "AdministrativeArea", "name": "Hälsingland" }
       ],
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday"
-        ],
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
         "opens": "07:00",
         "closes": "16:00"
       },
-      "legalName": "WSH Bygg"
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "ratingCount": "48"
+      },
+      "sameAs": [
+        "https://www.instagram.com/wsh.bygg/",
+        "https://www.facebook.com/profile.php?id=61550844801002"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Byggtjänster",
+        "itemListElement": [
+          {
+            "@type": "OfferCatalog",
+            "name": "Nybyggnation",
+            "url": "https://wshbygg.se/tjanster/nybyggnation",
+            "description": "Kundanpassad nybyggnation av villor, fritidshus och attefallshus i Hälsingland."
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Renovering",
+            "url": "https://wshbygg.se/tjanster/renovering",
+            "description": "Varsamma renoveringar av hus, kök, badrum och fasader med ROT-avdrag."
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Tillbyggnad",
+            "url": "https://wshbygg.se/tjanster/tillbyggnad",
+            "description": "Kundanpassade tillbyggnader och utbyggnader för mer boyta."
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Takbyte",
+            "url": "https://wshbygg.se/tjanster/takbyte",
+            "description": "Kompletta takbyten med tegel, betongpannor eller plåt."
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Gjutningar",
+            "url": "https://wshbygg.se/tjanster/gjutning",
+            "description": "Professionella betonggjutningar för husgrunder, garageplattor och stödmurar."
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Garage",
+            "url": "https://wshbygg.se/tjanster/garage",
+            "description": "Nybyggnation av garage, carportar och förråd från grund till tak."
+          }
+        ]
+      }
     }
-    </script>
+  </script>
+
+  <!-- JSON-LD: WebSite with SearchAction -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "WSH Bygg",
+      "url": "https://wshbygg.se",
+      "publisher": { "@id": "https://wshbygg.se/#organization" },
+      "inLanguage": "sv-SE"
+    }
+  </script>
 </head>
 
 <body>
