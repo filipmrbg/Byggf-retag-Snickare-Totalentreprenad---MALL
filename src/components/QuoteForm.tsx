@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Send, CheckCircle2 } from 'lucide-react';
+import { Send, CheckCircle2, Loader2 } from 'lucide-react';
 
 interface QuoteFormProps {
   title?: string;
@@ -35,6 +35,9 @@ function blurInput(e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement | 
   e.currentTarget.style.boxShadow = 'none';
 }
 
+const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
+const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY;
+
 export default function QuoteForm({
   title = 'Fyll i dina uppgifter',
   subtitle,
@@ -46,15 +49,53 @@ export default function QuoteForm({
   const [service, setService] = useState('');
   const [message, setMessage] = useState('');
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!name.trim() || !email.trim() || !phone.trim() || !message.trim()) {
       return;
     }
-    setSubmitted(true);
-    if (onSuccess) {
-      onSuccess();
+
+    setLoading(true);
+    setError('');
+
+    try {
+      const res = await fetch(`${SUPABASE_URL}/functions/v1/contact-form`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
+        },
+        body: JSON.stringify({
+          name: name.trim(),
+          email: email.trim(),
+          phone: phone.trim(),
+          service: service.trim() || undefined,
+          message: message.trim(),
+        }),
+      });
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => null);
+        throw new Error(data?.error || 'Något gick fel. Försök igen.');
+      }
+
+      const data = await res.json();
+      if (!data?.success) {
+        throw new Error(data?.error || 'Något gick fel. Försök igen.');
+      }
+
+      setSubmitted(true);
+      if (onSuccess) {
+        onSuccess();
+      }
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : 'Något gick fel. Försök igen.';
+      setError(msg);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -65,6 +106,7 @@ export default function QuoteForm({
     setService('');
     setMessage('');
     setSubmitted(false);
+    setError('');
   };
 
   return (
@@ -169,6 +211,23 @@ export default function QuoteForm({
           )}
           {!subtitle && <div style={{ height: '16px' }} />}
 
+          {error && (
+            <div
+              style={{
+                background: '#fef2f2',
+                border: '1px solid #fecaca',
+                borderRadius: '10px',
+                padding: '12px 16px',
+                marginBottom: '16px',
+                color: '#dc2626',
+                fontSize: '0.9rem',
+                fontWeight: 500,
+              }}
+            >
+              {error}
+            </div>
+          )}
+
           <form onSubmit={handleSubmit}>
             <label
               style={{
@@ -190,6 +249,7 @@ export default function QuoteForm({
               onFocus={focusInput}
               onBlur={blurInput}
               required
+              disabled={loading}
             />
 
             <label
@@ -212,6 +272,7 @@ export default function QuoteForm({
               onFocus={focusInput}
               onBlur={blurInput}
               required
+              disabled={loading}
             />
 
             <label
@@ -234,6 +295,7 @@ export default function QuoteForm({
               onFocus={focusInput}
               onBlur={blurInput}
               required
+              disabled={loading}
             />
 
             <label
@@ -253,15 +315,16 @@ export default function QuoteForm({
               style={{ ...inputStyle, cursor: 'pointer' }}
               onFocus={focusInput}
               onBlur={blurInput}
+              disabled={loading}
             >
               <option value="">Välj tjänst...</option>
-              <option value="nybyggnation">Nybyggnation</option>
-              <option value="renovering">Renovering</option>
-              <option value="tillbyggnad">Tillbyggnad</option>
-              <option value="takbyte">Takbyte</option>
-              <option value="gjutningar">Gjutningar & Grund</option>
-              <option value="garage">Garage</option>
-              <option value="annat">Annat projekt</option>
+              <option value="Nybyggnation">Nybyggnation</option>
+              <option value="Renovering">Renovering</option>
+              <option value="Tillbyggnad">Tillbyggnad</option>
+              <option value="Takbyte">Takbyte</option>
+              <option value="Gjutningar & Grund">Gjutningar & Grund</option>
+              <option value="Garage">Garage</option>
+              <option value="Annat projekt">Annat projekt</option>
             </select>
 
             <label
@@ -284,40 +347,62 @@ export default function QuoteForm({
               onFocus={focusInput}
               onBlur={blurInput}
               required
+              disabled={loading}
             />
 
             <button
               type="submit"
+              disabled={loading}
               style={{
                 width: '100%',
                 padding: '16px',
-                background: 'var(--color-primary)',
+                background: loading ? '#9ca3af' : 'var(--color-primary)',
                 color: '#ffffff',
                 border: 'none',
                 borderRadius: '12px',
                 fontWeight: 700,
                 fontSize: '1rem',
-                cursor: 'pointer',
+                cursor: loading ? 'not-allowed' : 'pointer',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 gap: '8px',
                 transition: 'all 0.25s ease',
+                opacity: loading ? 0.8 : 1,
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.background = 'var(--color-primary-hover)';
-                e.currentTarget.style.transform = 'translateY(-2px)';
-                e.currentTarget.style.boxShadow = '0 8px 24px rgba(234, 88, 12, 0.4)';
+                if (!loading) {
+                  e.currentTarget.style.background = 'var(--color-primary-hover)';
+                  e.currentTarget.style.transform = 'translateY(-2px)';
+                  e.currentTarget.style.boxShadow = '0 8px 24px rgba(234, 88, 12, 0.4)';
+                }
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.background = 'var(--color-primary)';
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = 'none';
+                if (!loading) {
+                  e.currentTarget.style.background = 'var(--color-primary)';
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = 'none';
+                }
               }}
             >
-              <Send size={18} /> SKICKA OFFERTFÖRFRÅGAN
+              {loading ? (
+                <>
+                  <Loader2 size={18} style={{ animation: 'spin 1s linear infinite' }} /> SKICKAR...
+                </>
+              ) : (
+                <>
+                  <Send size={18} /> SKICKA OFFERTFÖRFRÅGAN
+                </>
+              )}
             </button>
           </form>
+
+          <style>{`
+            @keyframes spin {
+              from { transform: rotate(0deg); }
+              to { transform: rotate(360deg); }
+            }
+          `}</style>
         </>
       )}
     </div>
