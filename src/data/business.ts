@@ -5,7 +5,7 @@ export const business = {
   founder: 'Robin Ehn',
   founderTitle: 'Snickare',
   url: 'https://wshbygg.se',
-  email: 'wshbygg@gmail.com',
+  email: 'wshbygg@hotmail.com',
   phone: '070-652 99 36',
   phoneTel: '0706529936',
   address: {
