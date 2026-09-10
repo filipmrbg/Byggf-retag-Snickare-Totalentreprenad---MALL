@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect, lazy, Suspense } from 'react';
+import { usePageTracking } from './hooks/usePageTracking';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -10,6 +11,7 @@ const Quote = lazy(() => import('./pages/Quote'));
 const ServicesOverview = lazy(() => import('./pages/ServicesOverview'));
 const Animations = lazy(() => import('./pages/Animations'));
 const ServiceDetail = lazy(() => import('./pages/ServiceDetail'));
+const Statistik = lazy(() => import('./pages/Statistik'));
 
 function ScrollToTop() {
   const { pathname, hash, state } = useLocation();
@@ -38,6 +40,11 @@ function ScrollToTop() {
   return null;
 }
 
+function PageTracker() {
+  usePageTracking();
+  return null;
+}
+
 function PageWrapper({ children }: { children: React.ReactNode }) {
   const { pathname } = useLocation();
   return (
@@ -51,6 +58,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <PageTracker />
       <Navbar />
       <Suspense fallback={
         <div style={{ minHeight: '60vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -73,6 +81,7 @@ export default function App() {
           <Route path="/kontakt" element={<PageWrapper><Contact /></PageWrapper>} />
           <Route path="/offert" element={<PageWrapper><Quote /></PageWrapper>} />
           <Route path="/animationer" element={<PageWrapper><Animations /></PageWrapper>} />
+          <Route path="/statistik" element={<PageWrapper><Statistik /></PageWrapper>} />
           <Route path="*" element={<PageWrapper><Home /></PageWrapper>} />
         </Routes>
       </Suspense>
